@@ -1,0 +1,314 @@
+mixin filter(data)
+	if (data == "" || data == "documents")
+		div.search-filter
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск по документам")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+					a.show-structure.js-show-filter(href="#") Расширенный поиск
+				div.search-filter-more.js-search-filter-more
+					div.search-filter-col.search-filter-col_one
+						.search-filter-item
+							input.search-filter-more__text(type="text", placeholder="Номер документа")
+						.search-filter-item
+							select.js-select.search-filter-more__select(data-placeholder="Тип документа", data-menuclass="form-select-filter")
+								option(val="1") Тип документа 12
+								option(val="2") Тип документа 2
+								option(val="3") Тип документа 3
+					div.search-filter-col
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации с")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата документа с")
+					div.search-filter-col
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации до")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата документа до")
+				div.search-filter-result
+					.search-filter-total
+						p Всего:
+							b 568
+					.search-filter-options
+						.search-filter-option
+							label Отображать по:
+							select.js-select.filter-select-pages
+								option 10
+								option 20
+								option 30
+
+	if (data == "departments")
+		div.search-filter
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск по документам")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+					a.show-structure.js-show-filter(href="#") Расширенный поиск
+				div.search-filter-more.search-filter-more_departments.js-search-filter-more
+					div.search-filter-col.search-filter-col_one.search-filter-col_line
+						.search-filter-item
+							select.js-select.search-filter-more__select(data-placeholder="Организационная форма", data-menuclass="form-select-filter")
+								option(val="1") Тип документа 1
+								option(val="2") Тип документа 2
+								option(val="3") Тип документа 3
+					div.search-filter-col.search-filter-col_two
+						.search-filter-item
+							select.js-select.search-filter-more__select(data-placeholder="Субъект", data-menuclass="form-select-filter")
+								option(val="1") Тип документа 1
+								option(val="2") Тип документа 2
+								option(val="3") Тип документа 3
+					
+				div.search-filter-result
+					.search-filter-total
+						p Всего:
+							b 568
+					.search-filter-options
+						.search-filter-option
+							label Отображать по:
+							select.js-select.filter-select-pages
+								option 10
+								option 20
+								option 30
+
+	if (data == "press")
+		div.search-filter
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск по новостям")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+					a.show-structure.js-show-filter(href="#") Расширенный поиск
+				div.search-filter-more.search-filter-more_press.js-search-filter-more
+					div.search-filter-col.search-filter-col_one
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события с")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации с")
+					div.search-filter-col.search-filter-col_two
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события до")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации до")
+					
+		
+		div.tabs.fake-tabs
+			ul.tabs-handles
+				li.tabs-handles-item.tabs-handles-item_active
+					a(href="#functions")
+						| Все
+				li.tabs-handles-item
+					a(href="#biography")
+						| Новости
+				li.tabs-handles-item
+					a(href="#contacts")
+						| События
+				li.tabs-handles-item
+					a(href="#interviews")
+						| Интервью
+				li.tabs-handles-item
+					a(href="#news")
+						| Достижения
+
+		div.search-filter-result
+			.search-filter-total
+				p Всего:
+					b 568
+			.search-filter-options
+				.search-filter-option
+					label Отображать по:
+					select.js-select.filter-select-pages(data-menuclass="form-select-pages")
+						option 10
+						option 20
+						option 30
+						option 10
+						option 20
+						option 30
+						option 10
+						option 20
+						option 30
+						option 10
+						option 20
+						option 30
+						option 10
+						option 20
+						option 30
+	
+	if (data == "press2")
+		div.tabs.fake-tabs
+			ul.tabs-handles
+				
+				li.tabs-handles-item.tabs-handles-item_active
+					a(href="/press_center2.html")
+						| Новости
+				li.tabs-handles-item
+					a(href="#contacts")
+						| События
+				li.tabs-handles-item
+					a(href="#interviews")
+						| Интервью
+				li.tabs-handles-item
+					a(href="#news")
+						| Достижения
+				li.tabs-handles-item
+					a(href="/press_center2_all.html")
+						| Все
+
+			a.show-structure.js-show-filter(href="#") Поиск
+
+		div.search-filter.search-filter_gray.js-search-filter-more
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск по новостям")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+				div.search-filter-more.search-filter-more_press
+					div.search-filter-col.search-filter-col_one
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события с")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации с")
+					div.search-filter-col.search-filter-col_two
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события до")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации до")
+
+		div.search-filter-result
+			.search-filter-total
+				p Всего:
+					b 568
+			.search-filter-options
+				.search-filter-option
+					label Отображать по:
+					select.js-select.filter-select-pages
+						option 10
+						option 20
+						option 30
+
+	if (data == "press3")
+		div.tabs.fake-tabs
+			ul.tabs-handles
+				li.tabs-handles-item
+					a(href="/press_center2.html")
+						| Новости
+				li.tabs-handles-item
+					a(href="#contacts")
+						| События
+				li.tabs-handles-item
+					a(href="#interviews")
+						| Интервью
+				li.tabs-handles-item
+					a(href="#news")
+						| Достижения
+				li.tabs-handles-item.tabs-handles-item_active
+					a(href="/press_center2_all.html")
+						| Все
+			a.show-structure.js-show-filter(href="#") Поиск
+
+		div.search-filter.search-filter_gray.js-search-filter-more
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск по новостям")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+				div.search-filter-more.search-filter-more_press
+					div.search-filter-col.search-filter-col_one
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события с")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации с")
+					div.search-filter-col.search-filter-col_two
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события до")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации до")
+
+		div.search-filter-result
+			.search-filter-total
+				p Всего:
+					b 568
+			.search-filter-options
+				.search-filter-option
+					label Отображать по:
+					select.js-select.filter-select-pages
+						option 10
+						option 20
+						option 30
+
+	if (data == "media")
+		div.search-filter
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск по новостям")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+					a.show-structure.js-show-filter(href="#") Расширенный поиск
+				div.search-filter-more.search-filter-more_press.js-search-filter-more
+					div.search-filter-col.search-filter-col_one
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события с")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации с")
+					div.search-filter-col.search-filter-col_two
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события до")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации до")
+					
+		
+		div.tabs.fake-tabs
+			ul.tabs-handles
+				li.tabs-handles-item.tabs-handles-item_active
+					a(href="#functions")
+						| Все
+				li.tabs-handles-item
+					a(href="#biography")
+						| Фото
+				li.tabs-handles-item
+					a(href="#contacts")
+						| Видео
+
+		div.search-filter-result
+			.search-filter-total
+				p Всего:
+					b 568
+			.search-filter-options
+				.search-filter-option
+					label Отображать по:
+					select.js-select.filter-select-pages
+						option 10
+						option 20
+						option 30
+
+	if (data == "search")
+		div.search-filter
+			form.search-filter-form
+				div.search-filter-main
+					div.search-filter-main-block
+						input.search-filter-main__text(type="text", placeholder="Поиск")
+						input.search-filter-main__btn(type="submit", value="Поиск")
+					a.show-structure.js-show-filter(href="#") Расширенный поиск
+				div.search-filter-more.search-filter-more_press.js-search-filter-more
+					div.search-filter-col.search-filter-col_one
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события с")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации с")
+					div.search-filter-col.search-filter-col_two
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата события до")
+						.search-filter-item.search-filter-item_calendar
+							input.search-filter-more__calendar(type="text", placeholder="Дата публикации до")
+				
+				div.search-filter-result
+					.search-filter-total
+						p Всего:
+							b 568
+					.search-filter-options
+						.search-filter-option
+							label Отображать по:
+							select.js-select.filter-select-search
+								option релевантности
+								option дате публикации

@@ -1,0 +1,115 @@
+.header-social-menu {
+	@include nl;
+	white-space:nowrap;
+	margin-bottom:10px;
+	text-align: right;
+	margin-right:-3px;
+	font-size:0;
+    padding-top:10px;
+	li {
+		@extend .ib-t;
+
+		&:after {
+			content:'';
+			@extend .ib-t;
+			background: #cfd8dc;
+			height: 18px;
+            margin: 1px 5px 0;
+			width:1px;
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	
+}
+
+.icon-link {
+    margin:3px 5px 0;
+    transform: scale(1.25);
+}
+
+.icon-link_special {
+    @include bg-svg($eye);
+    background: url(%=staticPrefixForCss=%minified-svg/eye.svg) 0 0 no-repeat;
+    transform: scale(1.15);
+    margin-top:5px;
+    .special & {
+        @include bg-svg($b_eye);
+    }
+    .special.color2 & {
+        @include bg-svg($w_eye);
+    }
+    .special.color3 & {
+        @include bg-svg($blue_eye);
+    }
+}
+.icon-link_facebook {
+    @include bg-svg($fb);
+    background: url(%=staticPrefixForCss=%minified-svg/fb.svg) 0 0 no-repeat;
+    .special & {
+        @include bg-svg($b_fb);
+    }
+    .special.color2 & {
+        @include bg-svg($w_fb);
+    }
+    .special.color3 & {
+        @include bg-svg($blue_fb);
+    }
+}
+.icon-link_twitter {
+    @include bg-svg($twitter);
+    background: url(%=staticPrefixForCss=%minified-svg/twitter.svg) 0 0 no-repeat;
+    .special & {
+        @include bg-svg($b_twitter);
+    }
+    .special.color2 & {
+        @include bg-svg($w_twitter);
+    }
+    .special.color3 & {
+        @include bg-svg($blue_twitter);
+    }
+}
+.icon-link_instagram {
+    @include bg-svg($instagram);
+    background: url(%=staticPrefixForCss=%minified-svg/instagram.svg) 0 0 no-repeat;
+    .special & {
+        @include bg-svg($b_instagram);
+    }
+    .special.color2 & {
+        @include bg-svg($w_instagram);
+    }
+    .special.color3 & {
+        @include bg-svg($blue_instagram);
+    }
+}
+
+
+.lang-switcher {
+	font-size: 18px;
+	@extend .ib-t;
+	margin:1px 5px;
+}
+	.lang-switcher__link {
+		color:$baseFontColor;
+		text-decoration: underline;
+
+		&.lang-switcher__link_active {
+			@include link;
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+			}
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+		}
+	}

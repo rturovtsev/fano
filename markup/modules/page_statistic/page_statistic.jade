@@ -1,0 +1,213 @@
+mixin page_statistic(data)
+    section.page-content
+        header.page-content-header
+            h1 Статистика
+
+        .statistic-list
+            .statistic-list-item
+                h3 Показатели посещаемости
+
+                div.tabs.js-tabs
+                    ul.tabs-handles
+                        li.tabs-handles-item.tabs-handles-item_active
+                            a(href="#year1").js-tabs-handle
+                                |Год
+                        li.tabs-handles-item
+                            a(href="#month1").js-tabs-handle
+                                |Месяц
+                        li.tabs-handles-item
+                            a(href="#week1").js-tabs-handle
+                                |Неделя
+                        li.tabs-handles-item
+                            a(href="#day1").js-tabs-handle
+                                |День
+
+                    div.tabs-contents
+                        div.tab-contents-item.js-tabs-item#js-tab-year1
+                            .statistic-date-w
+                                a.statistic-date.dropdown-trigger
+                                    |19-26 октября 2015
+                                .statistic-date-dropdown.dropdown-cont
+                                    .search-filter-item.search-filter-item_calendar
+                                        input.search-filter-more__calendar(type="text", placeholder="Дата с")
+                                    .search-filter-item.search-filter-item_calendar
+                                        input.search-filter-more__calendar(type="text", placeholder="Дата по")
+                                    div
+                                        input.form-button.highcharts-set-date_calendar(type="submit")
+
+                            .container-highcharts_1#container-highcharts_1
+
+                        div.tab-contents-item.js-tabs-item#js-tab-month1.js-hidden
+                            |...
+
+                        div.tab-contents-item.js-tabs-item#js-tab-week1.js-hidden
+                            |...
+
+                        div.tab-contents-item.js-tabs-item#js-tab-day1.js-hidden
+                            |...
+
+
+            .statistic-list-item
+                h3 Рейтинг посещаемости основных разделов сайта (тыс. чел., %)
+
+                div.tabs.js-tabs
+                    ul.tabs-handles
+                        li.tabs-handles-item.tabs-handles-item_active
+                            a(href="#year2").js-tabs-handle
+                                |Год
+                        li.tabs-handles-item
+                            a(href="#month2").js-tabs-handle
+                                |Месяц
+                        li.tabs-handles-item
+                            a(href="#week2").js-tabs-handle
+                                |Неделя
+                        li.tabs-handles-item
+                            a(href="#day2").js-tabs-handle
+                                |День
+
+                    div.tabs-contents
+                        div.tab-contents-item.js-tabs-item#js-tab-year2
+                            .statistic-date-w
+                                a.statistic-date.dropdown-trigger
+                                    | 19-26 октября 2015
+                                .statistic-date-dropdown.dropdown-cont
+                                    .search-filter-item.search-filter-item_calendar
+                                        input.search-filter-more__calendar(type="text", placeholder="Дата с")
+                                    .search-filter-item.search-filter-item_calendar
+                                        input.search-filter-more__calendar(type="text", placeholder="Дата по")
+                                    div
+                                        input.form-button.highcharts-set-date_calendar(type="submit")
+
+                            .container-highcharts_2#container-highcharts_2
+
+                        div.tab-contents-item.js-tabs-item#js-tab-month2.js-hidden
+                            | ...
+                        div.tab-contents-item.js-tabs-item#js-tab-week2.js-hidden
+                            | ...
+                        div.tab-contents-item.js-tabs-item#js-tab-day2.js-hidden
+                            | ...
+
+
+            .statistic-list-item
+                h3 Рейтинг посещаемости страниц сайта (тыс. чел., %)
+
+                div.tabs.js-tabs
+                    ul.tabs-handles
+                        li.tabs-handles-item.tabs-handles-item_active
+                            a(href="#year3").js-tabs-handle
+                                |Год
+                        li.tabs-handles-item
+                            a(href="#month3").js-tabs-handle
+                                |Месяц
+                        li.tabs-handles-item
+                            a(href="#week3").js-tabs-handle
+                                |Неделя
+                        li.tabs-handles-item
+                            a(href="#day3").js-tabs-handle
+                                |День
+
+                    div.tabs-contents
+                        div.tab-contents-item.js-tabs-item#js-tab-year3
+                            .statistic-date-w
+                                a.statistic-date.dropdown-trigger
+                                    | 19-26 октября 2015
+                                .statistic-date-dropdown.dropdown-cont
+                                    .search-filter-item.search-filter-item_calendar
+                                        input.search-filter-more__calendar(type="text", placeholder="Дата с")
+                                    .search-filter-item.search-filter-item_calendar
+                                        input.search-filter-more__calendar(type="text", placeholder="Дата по")
+                                    div
+                                        input.form-button.highcharts-set-date_calendar(type="submit")
+
+                            .rating-page-list
+                                a.a_all_page(href="#") Рейтинг всех страниц сайта
+
+                                ol.ol_rp
+                                    li
+                                        span.arrow.arrow_top
+                                        span.rpage_txt
+                                            |Координация и контроль деятельности ФАНО РФ, анализ
+                                        span.rpage_r
+                                            |2227
+                                            br
+                                            .rpage_line(style="width: 100%;")
+                                    li
+                                        span.arrow.arrow_down
+                                        span.rpage_txt
+                                            |Антикоррупционная экспертиза
+                                        span.rpage_r
+                                            |1304
+                                            br
+                                            .rpage_line(style="width: 60%;")
+                                    li
+                                        span.arrow.arrow_top
+                                        span.rpage_txt
+                                            |Доклады, отчеты, обзоры, статистическая информация
+                                        span.rpage_r
+                                            |752
+                                            br
+                                            .rpage_line(style="width: 30%;")
+                                    li
+                                        span.arrow.arrow_top
+                                        span.rpage_txt
+                                            |Координация и контроль деятельности ФАНО, анализ
+                                        span.rpage_r
+                                            |752
+                                            br
+                                            .rpage_line(style="width: 30%;")
+                                    li
+                                        span.arrow.arrow_down
+                                        span.rpage_txt
+                                            |Антикоррупционная экспертиза
+                                        span.rpage_r
+                                            |662
+                                            br
+                                            .rpage_line(style="width: 25%;")
+                                    li
+                                        span.arrow.arrow_top
+                                        span.rpage_txt
+                                            |Доклады, отчеты, обзоры, статистическая информация
+                                        span.rpage_r
+                                            |662
+                                            br
+                                            .rpage_line(style="width: 25%;")
+                                    li
+                                        span.arrow.arrow_top
+                                        span.rpage_txt
+                                            |Координация и контроль деятельности ФАНО РФ, анализ
+                                        span.rpage_r
+                                            |662
+                                            br
+                                            .rpage_line(style="width: 25%;")
+                                    li
+                                        span.arrow.arrow_down
+                                        span.rpage_txt
+                                            |Антикоррупционная экспертиза
+                                        span.rpage_r
+                                            |530
+                                            br
+                                            .rpage_line(style="width: 20%;")
+                                    li
+                                        span.arrow.arrow_down
+                                        span.rpage_txt
+                                            |Доклады, отчеты, обзоры, статистическая информация
+                                        span.rpage_r
+                                            |530
+                                            br
+                                            .rpage_line(style="width: 20%;")
+                                    li
+                                        span.arrow.arrow_down
+                                        span.rpage_txt
+                                            |Координация и контроль деятельности ФАНО, анализ
+                                        span.rpage_r
+                                            |530
+                                            br
+                                            .rpage_line(style="width: 20%;")
+
+
+                        div.tab-contents-item.js-tabs-item#js-tab-month3.js-hidden
+                            | ...
+                        div.tab-contents-item.js-tabs-item#js-tab-week3.js-hidden
+                            | ...
+                        div.tab-contents-item.js-tabs-item#js-tab-day3.js-hidden
+                            | ...

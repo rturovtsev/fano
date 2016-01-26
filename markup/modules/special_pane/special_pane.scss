@@ -1,0 +1,297 @@
+.special_pane {
+    height: 46px;
+    background-color: #E8E8E8;
+    background: linear-gradient(to bottom,  #fefefe 0%,#E8E8E8 100%);
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    width: 1000px;
+    z-index: 1000;
+    letter-spacing: normal;
+    .special.color2 & {
+        background: linear-gradient(to bottom,  #2E2E2E 0%,#060606 100%);
+    }
+    .special.color3 & {
+        background: linear-gradient(to bottom,  #8AB9E3 0%,#6FA9DF 100%);
+    }
+
+    a {
+        outline: none;
+    }
+
+    .dt,
+    .dd {
+        @extend .ib-t;
+    }
+
+    .fontsize {
+        padding-top: 11px;
+        margin-left: 19px;
+        @extend .ib-t;
+
+        .dt {
+            margin-right: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            height: 31px;
+            margin-left: 5px;
+            display: inline-block;
+            background-image: url('%=staticPrefixForCss=%assets/special_pane/fontsize.png');
+            position: relative;
+            top: -5px;
+            .special.color2 & {
+                background-image: url('%=staticPrefixForCss=%assets/special_pane/b_fontsize.png');
+            }
+            .special.color3 & {
+                background-image: url('%=staticPrefixForCss=%assets/special_pane/blue_fontsize.png');
+            }
+        }
+
+        .a-fontsize-small {
+            width: 20px;
+            height: 31px;
+
+            &:hover,
+            &.active {
+                background-position: 0 -31px;
+            }
+        }
+
+        .a-fontsize-normal {
+            width: 26px;
+            background-position: -20px 0;
+
+            &:hover,
+            &.active {
+                background-position: -20px -31px;
+            }
+        }
+
+        .a-fontsize-big {
+            width: 26px;
+            background-position: -46px 0;
+
+            &:hover,
+            &.active {
+                background-position: -46px -31px;
+            }
+        }
+    }
+
+
+    .colors {
+        display: inline-block;
+        padding-top: 11px;
+        margin-left: 40px;
+        width: 200px;
+
+        .dt {
+            margin-right: 0;
+        }
+
+        a {
+            height: 31px;
+            margin-left: 5px;
+            display: inline-block;
+            background-image: url('%=staticPrefixForCss=%assets/special_pane/colors.png');
+            position: relative;
+            top: -5px;
+            text-decoration: none;
+            width: 26px;
+            .special.color2 & {
+                background-image: url('%=staticPrefixForCss=%assets/special_pane/b_colors.png');
+            }
+            .special.color3 & {
+                background-image: url('%=staticPrefixForCss=%assets/special_pane/blue_colors.png');
+            }
+        }
+
+        .a-color1 {
+            &:hover,
+            &.active {
+                background-position: 0 -31px;
+            }
+        }
+
+        .a-color2 {
+            background-position: -26px 0;
+
+            &:hover,
+            &.active {
+                background-position: -26px -31px;
+            }
+        }
+
+        .a-color3 {
+            background-position: 100% 0;
+
+            &:hover,
+            &.active {
+                background-position: 100% -31px;
+            }
+        }
+    }
+
+    .default-version,
+    .special-help,
+    .special-settings {
+        @extend .ib-t;
+        padding-top: 11px;
+        margin-left: 40px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .a-default-version .icon-link_special {
+        @extend .ib-m;
+        margin-right: 6px;
+        margin-top: -1px;
+    }
+
+    .a-special-settings {
+        position: relative;
+        padding-right: 16px;
+
+        &:after {
+            position: absolute;
+            right: 3px;
+            top: 8px;
+            @include css-triangle(5px, $black, 'top');
+
+            .special.color2 & {
+                @include css-triangle(5px, $white, 'top');
+            }
+            .special.color3 & {
+                @include css-triangle(5px, $specblue1, 'top');
+            }
+        }
+    }
+
+    .popped {
+        border: 2px solid;
+        background: $white;
+        position: absolute;
+        left: 0;
+        top: 46px;
+        width: 1000px;
+        z-index: 100;
+        padding: 13px 21px 23px 21px;
+        font-size: 20px;
+        display: none;
+        .special.color2 & {
+            background: $black;
+        }
+        .special.color3 & {
+            background: $specblue2;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            margin-top: 0;
+            font-weight: normal;
+        }
+
+        p span {
+            font-weight: normal
+        }
+    }
+
+    .choose-font-family {
+        margin-bottom: 10px;
+        padding-left: 20px;
+    }
+
+    .a-font-family,
+    .a-letter-spacing {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 2px 6px;
+        text-decoration: none;
+        border: 1px solid transparent;
+
+        &.active {
+            color: $white;
+            background-color: $black;
+            border: 1px solid;
+        }
+        .special.color2 &.active {
+            color: $black;
+            background-color: $white;
+        }
+        .special.color3 &.active {
+            color: $specblue1;
+            background-color: $specblue2;
+        }
+
+        &:hover {
+            border: 1px solid;
+        }
+    }
+
+    .choose-letter-spacing {
+        margin-bottom: 40px;
+        padding-left: 20px;
+    }
+
+    #spacing-small {
+        letter-spacing: inherit;
+    }
+
+    #spacing-normal {
+        letter-spacing: 2px;
+    }
+
+    #spacing-big {
+        letter-spacing: 5px;
+    }
+
+    .choose-colors {
+        font-size: 22px;
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            display: block;
+            padding: 6px 12px;
+            text-decoration: none;
+        }
+    }
+
+    .li-color1 a {
+        color: #000;
+        background: #fff;
+        border: 1px solid;
+    }
+    .li-color2 a {
+        color: #fff;
+        background: #000
+    }
+    .li-color3 a {
+        color: #063462;
+        background: #9dd1ff;
+        border: 1px solid;
+    }
+
+    .saveit {
+        font-weight: bold;
+        margin-top: 15px;
+        padding: 5px 0;
+
+        .btn_special {
+            margin-left: 70px;
+        }
+    }
+}

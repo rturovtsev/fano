@@ -1,0 +1,11 @@
+[
+    {
+        "title": "NPM: install packages",
+        "command": "npm install"
+    },
+    {
+        "title": "Gulp: build",
+        "command": "./node_modules/.bin/gulp build-dev"
+    }
+]
+

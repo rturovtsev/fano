@@ -1,0 +1,12 @@
+mixin _template(data)
+    div.template
+        p #{data.age}
+        span(class=data.classes) test #{data.classes}
+        p(style={color:'red', background:'green'}) TEST
+        ul
+            each val in data.links
+                li
+                    a(href=val.url)= val.title
+                    span  text
+
+        div.svg-img

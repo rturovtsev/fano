@@ -1,0 +1,364 @@
+.show-structure {
+    position: relative;
+    float: right;
+    color:$blue;
+    border-bottom:1px dashed;
+    text-decoration: none;
+    margin-top:7px;
+    font-size: 14px;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+
+    &:before {
+        position: absolute;
+        left:-22px;
+        top:1px;
+        content:'';
+        @extend .ib-m;
+        @include bg-svg($plus);
+
+        .special & {
+            @include bg-svg($b_plus);
+        }
+        .special.color2 & {
+            @include bg-svg($w_plus);
+        }
+        .special.color3 & {
+            @include bg-svg($blue_plus);
+        }
+    }
+
+}
+.show-structure_active {
+    &:before {
+        @include bg-svg($minus);
+
+        .special & {
+            @include bg-svg($b_minus);
+        }
+        .special.color2 & {
+            @include bg-svg($w_minus);
+        }
+        .special.color3 & {
+            @include bg-svg($blue_minus);
+        }
+    }
+}
+
+.structure-list {
+    @include nl;
+    .structure-item__image img {
+        width:190px;
+    }
+    .structure-item_first .structure-item__image img {
+        width:224px;
+    }
+    .structure-item__name {
+        font-size: 20px;
+    }
+}
+.structure-item {
+    @extend .cf;
+    padding-bottom:20px;
+
+    .special &.specbordered {
+        border: 1px solid;
+        margin-bottom: 40px;
+        border-color: $black;
+    }
+    .special.color2 &.specbordered {
+        border-color: $white;
+    }
+    .special.color3 &.specbordered {
+        border-color: $specblue1;
+    }
+
+    &:nth-child(2) {
+        .structure-item__text {
+            border:0;
+        }
+    }
+}
+    .structure-item__image {
+        float:left;
+        margin:3px 30px 0 0;
+        img {
+            width:150px;
+        }
+        .special & {
+            display: none;
+        }
+    }
+    .structure-item__text {
+        border-top:1px solid $gray;
+        overflow: hidden;
+        padding-bottom:0;
+        padding-top:20px;
+        position: relative;
+        top:-20px;
+        margin-bottom: -10px;
+
+        .special & {
+            padding-right: 20px;
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+
+        .special .specbordered & {
+            padding-left: 20px;
+            top: 0;
+            border-top: none;
+
+            &:after {
+                content: ' ';
+                height: 1px;
+                display: block;
+                margin-right: 30px;
+                margin-top: 30px;
+                border-top: 1px solid;
+            }
+        }
+    }
+    .structure-item__name {
+        font-size: 19px;
+        font-weight: bold;
+    }
+    a.structure-item__name {
+        @include black-link-decorated;
+
+        .special & {
+            color: $black;
+            font-size: 2.2rem;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+    }
+
+    .structure-item__job {
+        display: block;
+        margin-top:3px;
+        font-size: 16px;
+
+        .special & {
+            font-size: 1.9rem;
+        }
+    }
+
+    .structure-item__content {
+        margin-top:14px;
+
+        .special & {
+            font-size: 1.9rem;
+            line-height: normal;
+        }
+
+        p {
+            margin:10px 0;
+
+            .special & {
+                font-size: 1.9rem;
+                line-height: normal;
+            }
+        }
+    }
+
+.structure-item_first {
+    border-bottom:2px solid $darkgray;
+    margin-bottom:30px;
+
+    .special & .structure-item__name {
+        font-size: 2.4rem;
+        line-height: normal;
+    }
+    .special & .structure-item__job {
+        font-size: 2rem;
+        line-height: normal;
+    }
+    .special & .structure-item__content p {
+        font-size: 2rem;
+        line-height: normal;
+    }
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+    }
+
+    .structure-item__text {
+        border:0;
+    }
+}
+
+.structure-item_first .structure-item__image img,
+.structure-head-card__image {
+    width:224px;
+}
+
+.structure-more {
+    background: #E4EAED;
+    padding:20px;
+    margin-bottom:20px;
+    display: none;
+    clear:both;
+    position: relative;
+    top:20px;
+
+    .special & {
+        background-color: transparent;
+    }
+
+    &.structure-more_white {
+        background: #fff;
+        padding:30px 0;
+        border-top:2px solid $darkgray;
+
+        .special & {
+            background-color: transparent;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+    }
+    .structure-item__name{
+        font-size:18px;
+    }
+}
+.structure-more-item {
+    margin-bottom: 30px;
+    h2 {
+        font-size: 19px;
+        line-height: 25px;
+        font-weight: bold;
+        margin:0 0 0;
+
+        .special & {
+            font-size: 2.2rem;
+        }
+
+        a {
+            text-decoration: none;
+            @include black-link-decorated;
+
+            .special & {
+                color: $black;
+                line-height: normal;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+        }
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: bold;
+        margin:30px 0 15px;
+        color:$blue;
+
+        .special & {
+            font-size: 1.9rem;
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+
+    }
+    p {
+        font-size: 13px;
+        line-height: 17px;
+        margin:0 0 15px;
+
+        .special & {
+            font-size: $base-font-size_special;
+            line-height: normal;
+        }
+    }
+    .structure-item__name__wrap {
+        margin-top:-5px;
+    }
+    .structure-item__name {
+        font-size: 17px;
+
+        .special & {
+            font-size: 1.9rem;
+        }
+    }
+
+    &:last-child {
+        margin-bottom:0;
+    }
+     .text {
+        font-size: 13px;
+        line-height: 17px;
+
+         .special & {
+             font-size: $base-font-size_special;
+             line-height: normal;
+         }
+    }
+}
+
+// .structure-item__content h1,
+// .structure-item__content h2,
+// .structure-item__content h3,
+// .no-header-text h1,
+// .no-header-text h2,
+// .no-header-text h3 {
+//     display:none;
+// }
+
+
+.structure-item .extended-info, .structure-more-item .extended-info {
+    display:none;
+
+    .special & {
+        display: none !important;
+    }
+}
+
+.structure-list .structure-more-item .text,
+.structure-list .structure-item__content,
+.structure-list .structure-item__job,
+.structure-more .structure-item__job,
+.structure-list .structure-more-item p,
+.structure-more .structure-more-item p,
+.structure-list .content li, .structure-more .content li {
+    font-size: 16px;
+    line-height: 1.5em;
+}

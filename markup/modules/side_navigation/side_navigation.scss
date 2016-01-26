@@ -1,0 +1,128 @@
+.side-navigation {
+    display: block;
+    margin-bottom:30px;
+    padding-top:6px;
+    font-family: $body-font-family;
+    letter-spacing: normal;
+    header {
+        border-bottom:2px solid $darkgray;
+
+        .special & {
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+
+        h2 {
+            color:$blue;
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: normal;
+            margin:0 0 1px;
+
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+
+            a {
+                color:$blue;
+                text-decoration: none;
+
+                .special & {
+                    color: $black;
+                }
+                .special.color2 & {
+                    color: $white;
+                }
+                .special.color3 & {
+                    color: $specblue1;
+                }
+            }
+        }
+    }
+}
+
+.side-navigation-list {
+    @include nl;
+    margin-top:12px;
+    li {
+        border-left:1px solid $gray;
+
+        .special & {
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+
+        a, span {
+            padding:8px 15px;
+            display: block;
+        }
+        a {
+            font-size: 15px;
+            line-height: 18px;
+            display: block;
+            text-decoration: none;
+            &:hover {
+                color:$blue;
+
+                .special & {
+                    color: $black;
+                }
+                .special.color2 & {
+                    color: $white;
+                }
+                .special.color3 & {
+                    color: $specblue1;
+                }
+            }
+        }
+        &.side-navigation-item_active {
+            color:$blue;
+            border-left:3px solid $blue;
+
+            .special & {
+                color: $black;
+                border-color: $black;
+                font-weight: bold;
+            }
+            .special.color2 & {
+                color: $white;
+                border-color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+                border-color: $specblue1;
+            }
+
+            a, span {
+                padding-left:13px;
+                color: #0276bd;
+
+                .special & {
+                    color: $black;
+                }
+                .special.color2 & {
+                    color: $white;
+                }
+                .special.color3 & {
+                    color: $specblue1;
+                }
+            }
+        }
+    }
+}

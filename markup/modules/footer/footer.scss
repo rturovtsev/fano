@@ -1,0 +1,97 @@
+.page__footer-wrapper {
+	background: #b0bec5;
+    font-family: $body-font-family;
+    letter-spacing: normal;
+
+    .special & {
+        border-top: 1px solid;
+        background-color: transparent;
+    }
+}
+.page__footer {
+	background: #b0bec5;
+	padding: 50px 0;
+	height: 285px;
+
+    .special & {
+        background-color: transparent;
+    }
+}
+
+.footer-logo {
+	text-align: center;
+    margin-top:-24px;
+}
+
+.footer-logo__image {
+    width:96px; 
+}
+.footer-logo__text {
+	// color: #77868d;
+     color:#37474e; 
+    font-weight: bold;
+	margin-top: 15px;
+    font-size: 19px;
+    line-height: 0.95em;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+
+.footer-menu {
+	@include nl;
+	@extend .cf;
+    
+    font-size: 16px;
+    .special & {
+        display: none;
+    }
+
+	li {
+		font-size: 16px;
+	}
+	a {
+		display: block;
+		margin-bottom: 5px;
+        text-decoration: none;
+        span {
+            color:$baseFontColor;
+            @include smart-underline(#b0bec5, $baseFontColor,  blue, 86%);
+        }
+        
+
+        .special & {
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+	}
+}
+
+.copyright {
+    margin-top: 29px;
+    color: #77868d;
+    font-size: 13px;
+    line-height: 18px;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}

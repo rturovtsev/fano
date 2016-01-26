@@ -1,0 +1,266 @@
+include ../paginator/paginator
+include ../star_rating/star_rating
+
+
+mixin page_polls(data)
+	section.page-content
+		header.page-content-header
+			h1 Опросы
+
+		div.tabs.js-tabs
+			ul.tabs-handles
+				li.tabs-handles-item
+					a(href="#current").js-tabs-handle
+						| Текущие
+				li.tabs-handles-item.tabs-handles-item_active
+					a(href="#past").js-tabs-handle
+						| Прошедшие
+				
+
+			div.tabs-contents
+				div.tab-contents-item.js-tabs-item#js-tab-current.js-hidden
+					ul.polls-list
+						li.polls-list_one
+							time 24.08.2015 - 14.10.2015
+							h2 Информационное обеспечение академических библиотек (заголовок инфоблока)
+							p.poll-note
+								b Цель опроса:
+								|  Какие библиотеки вам наиболее интересны (описание инфоблока)
+
+							form.poll-form(action="")
+								fieldset.poll-question
+									
+									.poll-question__rating
+										.circle-rating(data-score="3.5")
+											strong
+											span (144)
+										+star_rating
+									
+									h2 Ресурсами какой библиотеки РАН вы пользуетесь наиболее часто? (заголовок опроса)
+									
+									p.poll-note
+										|  Какие библиотеки вам наиболее интересны (описание опроса)
+									div.form-line
+										input.form-radio#poll1_1(type="radio", name="poll1")
+										label.form-radio-label(for="poll1_1") Библиотека по естественным наукам РАН (БЕН РАН) Библиотека по естественным наукам РАН (БЕН РАН)
+									div.form-line
+										input.form-radio#poll1_2(type="radio", name="poll1")
+										label.form-radio-label(for="poll1_2") Центральная научная библиотека УрО РАН
+									div.form-line
+										input.form-radio#poll1_3(type="radio", name="poll1")
+										label.form-radio-label(for="poll1_3") Центральная научная библиотека ДВО РАН
+									div.form-line
+										input.form-radio#poll1_4(type="radio", name="poll1")
+										label.form-radio-label(for="poll1_4") Государственная публичная научно-техническая библиотека СО РАН
+									div.form-line
+										input.form-radio#poll1_5(type="radio", name="poll1")
+										label.form-radio-label(for="poll1_5") Центральная научная сельскохозяйственная библиотека
+								.poll-form-footer
+									.poll-note 
+										b Приняли участие: 
+										span.number 137 
+										| пользователей
+									input.form-button.form-button__small(type="submit", value="Проголосовать")
+							
+							form.poll-form(action="")
+								fieldset.poll-question
+									.poll-question__rating
+										.circle-rating(data-score="3.5")
+											strong
+											span (144)
+										+star_rating
+									h2 Ресурсами какой библиотеки РАН вы пользуетесь наиболее часто?
+									p.poll-note
+										|  Какие библиотеки вам наиболее интересны (описание опроса)
+									div.form-line
+										input.form-radio#poll2_1(type="radio", name="poll2")
+										label.form-radio-label(for="poll2_1") Библиотека по естественным наукам РАН (БЕН РАН)
+									div.form-line
+										input.form-radio#poll2_2(type="radio", name="poll2")
+										label.form-radio-label(for="poll2_2") Центральная научная библиотека УрО РАН
+									div.form-line
+										input.form-radio#poll2_3(type="radio", name="poll2")
+										label.form-radio-label(for="poll2_3") Центральная научная библиотека ДВО РАН
+									div.form-line
+										input.form-radio#poll2_4(type="radio", name="poll2")
+										label.form-radio-label(for="poll2_4") Государственная публичная научно-техническая библиотека СО РАН
+									div.form-line
+										input.form-radio#poll2_5(type="radio", name="poll2")
+										label.form-radio-label(for="poll2_5") Центральная научная сельскохозяйственная библиотека
+
+								.poll-form-footer
+									.poll-note 
+										b Приняли участие: 
+										span.number 137 
+										| пользователей
+									input.form-button.form-button__small(type="submit", value="Проголосовать")
+
+						li.polls-list_one
+							time 24.08.2015 - 14.10.2015
+							h2 Информационное обеспечение академических библиотек (заголовок инфоблока)
+							p.poll-note
+								b Цель опроса:
+								|  Какие библиотеки вам наиболее интересны (описание инфоблока)
+
+							div.poll-result
+								section.poll-question
+									.poll-question__rating
+										.circle-rating(data-score="3.5")
+											strong
+											span (144)
+										+star_rating
+									h2 Результаты текущего опроса указано как "Выводить"
+									div.poll-result-line
+										div.poll-result_label Библиотека по естественным наукам РАН (БЕН РАН)
+										div.poll-result_value
+											b 130
+											div.poll-result_graph(style="width:30%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная библиотека УрО РАН
+										div.poll-result_value
+											b 50
+											div.poll-result_graph(style="width:10%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная библиотека ДВО РАН
+										div.poll-result_value
+											b 330
+											div.poll-result_graph(style="width:40%")
+									div.poll-result-line
+										div.poll-result_label Государственная публичная научно-техническая библиотека СО РАН
+										div.poll-result_value
+											b 470
+											div.poll-result_graph(style="width:50%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная сельскохозяйственная библиотека
+										div.poll-result_value
+											b 530
+											div.poll-result_graph(style="width:70%")
+
+							.poll-form-footer
+								.poll-note 
+									b Приняли участие: 
+									span.number 137 
+									| пользователей
+							
+							form.poll-form(action="")
+								section.poll-question
+									.poll-question__rating
+										.circle-rating(data-score="3.5")
+											strong
+											span (144)
+										+star_rating
+									h2 Результаты текущего опроса указано как "Не выводить"
+									p.poll-note
+										|  Какие библиотеки вам наиболее интересны (описание опроса)
+									
+									p.poll-result
+										| Спасибо за участие в опросе
+
+								.poll-form-footer
+									.poll-note 
+										b Приняли участие: 
+										span.number 137 
+										| пользователей
+									
+
+					
+
+				div.tab-contents-item.js-tabs-item#js-tab-past
+					ul.polls-list
+						li.polls-list_one
+							time 24.08.2015 - 14.10.2015
+							h2 Информационное обеспечение академических библиотек
+							p.poll-note
+								b Цель опроса:
+								|  Какие библиотеки вам наиболее интересны
+
+							div.poll-result
+								section.poll-question
+									.poll-question__rating
+										.circle-rating(data-score="3.5")
+											strong
+											span (144)
+										+star_rating
+									h2 Ресурсами какой библиотеки РАН вы пользуетесь наиболее часто?
+									div.poll-result-line
+										div.poll-result_label Библиотека по естественным наукам РАН (БЕН РАН)
+										div.poll-result_value
+											b 130
+											div.poll-result_graph(style="width:30%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная библиотека УрО РАН
+										div.poll-result_value
+											b 50
+											div.poll-result_graph(style="width:10%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная библиотека ДВО РАН
+										div.poll-result_value
+											b 330
+											div.poll-result_graph(style="width:40%")
+									div.poll-result-line
+										div.poll-result_label Государственная публичная научно-техническая библиотека СО РАН
+										div.poll-result_value
+											b 470
+											div.poll-result_graph(style="width:50%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная сельскохозяйственная библиотека
+										div.poll-result_value
+											b 530
+											div.poll-result_graph(style="width:70%")
+
+							.poll-form-footer
+								.poll-note 
+									b Всего в опросе приняли участие: 
+									span.number 137 
+									| пользователей
+								
+						li.polls-list_one
+							time 24.08.2015 - 14.10.2015
+							h2 Информационное обеспечение академических библиотек
+							p.poll-note
+								b Цель опроса:
+								|  Какие библиотеки вам наиболее интересны
+							div.poll-result
+								section.poll-question
+									.poll-question__rating
+										.circle-rating(data-score="3.5")
+											strong
+											span (144)
+										+star_rating
+									h2 Ресурсами какой библиотеки РАН вы пользуетесь наиболее часто?
+									div.poll-result-line
+										div.poll-result_label Библиотека по естественным наукам РАН (БЕН РАН)
+										div.poll-result_value
+											b 130
+											div.poll-result_graph(style="width:30%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная библиотека УрО РАН
+										div.poll-result_value
+											b 50
+											div.poll-result_graph(style="width:10%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная библиотека ДВО РАН
+										div.poll-result_value
+											b 330
+											div.poll-result_graph(style="width:40%")
+									div.poll-result-line
+										div.poll-result_label Государственная публичная научно-техническая библиотека СО РАН
+										div.poll-result_value
+											b 470
+											div.poll-result_graph(style="width:50%")
+									div.poll-result-line
+										div.poll-result_label Центральная научная сельскохозяйственная библиотека
+										div.poll-result_value
+											b 530
+											div.poll-result_graph(style="width:70%")
+
+								.poll-form-footer
+									.poll-note 
+										b Всего в опросе приняли участие: 
+										span.number 137 
+										| пользователей
+									
+					
+				
+				
+					

@@ -1,0 +1,15 @@
+mixin header-logo(data)
+    if data.link
+        a.header-logo(href="/")
+            img(src="%=staticPrefix=%img/assets/header-logo/logo.png",class="header-logo__image")
+            p.header-logo__text
+                | <b> ФАНО России </b>
+                | Федеральное агентство <br />
+                | научных организаций
+    else
+        div.header-logo
+            img(src="%=staticPrefix=%img/assets/header-logo/logo.png",class="header-logo__image")
+            p.header-logo__text
+                | <b> ФАНО России </b>
+                | Федеральное агентство <br />
+                | научных организаций

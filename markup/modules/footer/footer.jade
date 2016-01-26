@@ -1,0 +1,47 @@
+//include ../_template/_template
+
+mixin footer(data)
+	div.page__footer-wrapper
+		div.page__inside 
+			footer.page__footer
+				.row
+					.columns.large-3.small-3
+						.footer-logo
+							img(src="%=staticPrefix=%img/assets/footer/logo-footer-blue.png",class="footer-logo__image")
+							p.footer-logo__text ФАНО<br />России
+					.columns.large-9.small-9
+						.row.row-9
+							ul.footer-menu
+								li.columns.large-3.small-3
+									a(href="#") 
+										span О  ФАНО России 
+									a(href="#") 
+										span Руководство
+									a(href="#") Территориальные управления
+									a(href="#") Подведомственные организаций
+									a(href="#") Контакты
+
+								li.columns.large-3.small-3
+									a(href="#") Планирование деятельности
+									a(href="#") Контрольно-ревизионная деятельность
+									a(href="#") Противодействие коррупции
+									a(href="#") Открытые данные
+									a(href="#") Обращения граждан
+
+								li.columns.large-3.small-3
+									a(href="#") Версия для слабовидящих
+									a(href="#") О сайте
+									a(href="#") Карта сайта
+									a(href="#") Обратная связь
+									a(href="#") Статистика
+							.columns.large-9.small-9
+								.copyright
+									p 
+										|© Все материалы сайта доступны по лицензии: Creative Commons
+										br 
+									|  «Attribution» 4.0 Всемирная
+
+		
+
+
+

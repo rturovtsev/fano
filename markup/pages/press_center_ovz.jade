@@ -1,0 +1,8 @@
+include ../modules/special_pane/special_pane
+
+extends  ./press_center.jade
+block vars
+    - special = true;
+
+block special_pane
+    +special_pane

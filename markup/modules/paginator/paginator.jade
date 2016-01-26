@@ -1,0 +1,27 @@
+mixin paginator-body()
+	div.paginator
+		ul.pages
+			li.pages-item.pages-item_first
+				a.disabled(href="#" title="Назад") 
+			li.pages-item
+				span 1
+			li.pages-item
+				a(href="#") 2
+			li.pages-item
+				a(href="/23412") 3
+			li.pages-item
+				a(href="/23452345") 4
+			li.pages-item
+				a(href="/345234") ...
+			li.pages-item
+				a(href="/345234523") 10
+			li.pages-item.pages-item_last
+				a(href="/234234"  title="Вперед")
+
+mixin paginator(data)
+	if (data)
+		.paginator-full
+			+paginator-body()
+	else 
+		+paginator-body() 
+			

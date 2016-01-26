@@ -1,0 +1,19 @@
+mixin anons(data)
+    section.anons
+        header.anons__header
+            h1 #{data.title}
+        .anons__content
+            if data.content.links
+                ul.anons__links
+                    each val in data.content.links
+                        li
+                            a(href=val.url)=val.title 
+
+            if data.content.comment
+                .cite
+                   blockquote #{data.content.comment}
+                   .cite__stat
+                       time 29.10.2015
+                       br
+                       span.cite__author #{data.content.author}
+                       a.cite__link(href="#") Подробнее

@@ -1,0 +1,55 @@
+.banners-list {
+    @include nl;
+    padding-bottom:20px;
+    padding-top:20px;
+    li {
+        margin-bottom:20px;
+    }
+}
+.banners__item {
+    display: block;
+    border:1px solid #b0bec5;
+    color:$baseFontColor;
+    text-decoration: none;
+    padding:15px 15px 13px;
+    font-size: 15px;
+
+    .special & {
+        font-size: 16px;
+        color: $black;
+        border-color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+        border-color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+        border-color: $specblue1;
+    }
+
+    span {
+    	display: block;
+    }
+    &:hover {
+        text-decoration: none;
+        border:1px solid $baseFontColor;
+    }
+}
+.banners__title {
+	height:4em;
+    overflow:hidden;
+}
+.banners__link {
+	color:$blue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}

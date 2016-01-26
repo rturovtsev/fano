@@ -1,0 +1,283 @@
+mixin page_structure_more_item(data)
+    div.row.row-10
+                div.columns.large-5.small-5
+                    h3 Функции
+                    p 
+                        | Структура управлений центрального аппарата ФАНО 
+                        | России с информацией о функциях управлений, 
+                        | руководстве структурных подразделений и 
+                        | контактных данных, в наглядном виде
+                    p 
+                        | Структура управлений центрального аппарата ФАНО 
+                        | России с информацией о функциях управлений, 
+                        | руководстве структурных подразделений и 
+                        | контактных данных, в наглядном виде
+            
+                div.columns.large-5.small-5
+                    h3 Руководство
+                    .structure-item__name__wrap 
+                        a.structure-item__name(href="#")
+                            | #{data}
+                        span.structure-item__job
+                            | начальник управления
+                    h3 Контакты
+                    p 
+                        | Телефон: +7 (499) 606-01-01
+                        br 
+                        | Адрес электронной почты: management@fano.ru    
+
+
+
+
+mixin page_structure_more(data)
+    div.structure-more.js-structure-more
+        section.structure-more-item
+            h2
+                a(href="#")
+                    | Управление координации и обеспечения деятельности организаций в сфере 
+                    | медицинских наук, охраны здоровья, образования и культуры
+            +page_structure_more_item("Морозков Игорь Дмитриев")
+        section.structure-more-item
+            h2
+                a(href="#")
+                    | Управление координации и обеспечения деятельности организаций  
+                    | в сфере сельскохозяйственных наук
+            +page_structure_more_item("Романовский Михаил Юрьевич")
+        section.structure-more-item
+            h2
+                a(href="#") 
+                    | Управление координации и обеспечения деятельности организаций  
+                    | в сфере науки
+            +page_structure_more_item("Романовский Михаил Юрьевич")
+        section.structure-more-item
+            h2
+                a(href="#")
+                    | Управление бюджетных инвестиций  
+            +page_structure_more_item("Романовский Михаил Юрьевич")
+
+
+
+
+
+mixin page_structure(data)
+    section.page-content
+        header.page-content-header
+            a.show-structure.js-show-structure(href="#") Отобразить структуру
+            h1 Руководство
+            
+        ul.structure-list
+            li.structure-item.structure-item_first
+                a.structure-item__image(href="/structure_head.html")
+                    img(src="%=staticPrefix=%img/content/str1.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="/structure_head.html") 
+                        | Котюков
+                        br 
+                        | Михаил Михайлович
+                    span.structure-item__job
+                        | руководитель ФАНО России
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7(499) 606-01-01 
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема:
+                            br
+                            | пн-чт 11:00 - 18:00
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str2.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Медведев Михаил Михайлович
+                    span.structure-item__job
+                        | первый заместитель руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7(499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00  
+                
+                +page_structure_more        
+
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str3.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Степанов Александр Владимирович
+                    span.structure-item__job
+                        | заместитель руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+                +page_structure_more   
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str4.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Лопатин Алексей Владимирович
+                    span.structure-item__job
+                        | заместитель руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+                +page_structure_more
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str5.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Кузьмин Сергей Владимирович
+                    span.structure-item__job
+                        | заместитель руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+
+                +page_structure_more
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str6.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Кадымов Дмитрий Сергеевич
+                    span.structure-item__job
+                        | помощник руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+
+
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str7.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Пешкова Екатерина Сергеевна
+                    span.structure-item__job
+                        | помощник руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+
+
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str8.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Докучаева Мария Александровна
+                    span.structure-item__job
+                        | советник руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+
+
+            
+            li.structure-item
+                a.structure-item__image(href="#")
+                    img(src="%=staticPrefix=%img/content/str9.jpg", alt="")
+                div.structure-item__text
+                    a.structure-item__name(href="#") 
+                        | Лепешев Владислав Анатольевич
+                    span.structure-item__job
+                        | советник руководителя
+
+                    div.structure-item__content
+                        p
+                            | Приемная: +7 (499) 606-01-01
+                            br
+                            | Адрес электронной почты:
+                            br
+                            | management@fano.ru
+                        p
+                            | График личного приема: пн-чт 11:00 - 18:00 
+
+
+            
+            
+
+
+
+
+        div.structure-more.structure-more_white.js-structure-more
+            section.structure-more-item
+                h2
+                    a(href="#")
+                        | Отдел мобилизационной подготовки и гражданской обороны
+                +page_structure_more_item("Белов Николай Иванович")
+            section.structure-more-item
+                h2
+                    a(href="#")
+                        | Административное управление
+                +page_structure_more_item("Белов Николай Иванович")
+            section.structure-more-item
+                h2
+                    a(href="#")
+                        | Правовое управление
+                +page_structure_more_item("Белов Николай Иванович")
+            section.structure-more-item
+                h2
+                    a(href="#")
+                        | Управление внутреннего финансового контроля
+                +page_structure_more_item("Белов Николай Иванович")

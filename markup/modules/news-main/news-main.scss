@@ -1,0 +1,224 @@
+.news-main-list {
+    @include nl;
+    @extend .cf;
+    margin:30px 0 60px;
+
+    .special & {
+        margin-top: 0;
+    }
+}
+
+.news-main-item {
+    float:left !important;
+    .special & {
+        width: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.news-main-item_first {
+    .news-main__image {
+        @extend .ib-t;
+        width: 475px;
+        margin-right: 22px;
+        margin-bottom: 0;
+    }
+    .news-main__text {
+        @extend .ib-t;
+        width:30%;
+
+        .special & {
+            width: auto;
+            height: auto !important;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+    .news-main__content {
+        font-size: 14px;
+    }
+}
+
+.news-main__stat {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom:9px;
+
+    .special & {
+        font-size: 2.2rem;
+        line-height: normal;
+    }
+
+    time {
+        color:#607d8b;
+        font-size: 15px;
+        .special & {
+            color: $black;
+            font-size: 2.2rem;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+
+        &:after {
+            content:'';
+            @extend .ib-t;
+            background: #cfd8dc;
+            height:10px;
+            width:1px;
+            margin:1px 8px 0;
+
+            .special & {
+                background: $black;
+                height: 19px;
+            }
+            .special.color2 & {
+                background: $white;
+            }
+            .special.color3 & {
+                background: $specblue1;
+            }
+
+            .fontsize2 & {
+                height: 28px;
+            }
+            .fontsize3 & {
+                height: 33px;
+            }
+        }
+    }
+    a {
+        @include normal-link-decorated;
+        color:$blue;
+        font-size: 13px;
+
+        .special & {
+            font-size: 2.2rem;
+            color: $black;
+            background: none;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+
+    }
+    &.news-main__stat_nolink {
+        time {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+}
+
+.news-main__stat_noline time:after {
+    display: none;
+}
+
+.news-main__title {
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-decoration: none;
+    span {
+        @include black-link-decorated;
+
+        .special & {
+            font-size: 2rem;
+            line-height: normal;
+            color: $black;
+            background: none;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+    }
+}
+
+.news-main__image {
+
+}
+
+
+.news-main__imagebox {
+    margin-bottom:20px;
+    display: block;
+    text-decoration: none;
+    height:138px;
+    overflow: hidden;
+
+    .special & {
+        display: none;
+    }
+}
+.news-main__imagebox_video,.news-main__imagebox_2 {
+    position: relative;
+
+    .special & {
+        display: none;
+    }
+
+    &:after {
+        content:'';
+        position: absolute;
+        z-index:5;
+        top:50%;
+        left:50%;
+        margin:-29px 0 0 -29px;
+        background: url(%=staticPrefixForCss=%general/play.png) 0 0 no-repeat;
+        width:58px;
+        height:58px;
+    }
+}
+
+.news-main__imagebox_image, .news-main__imagebox_1 {
+    position: relative;
+
+    .special & {
+        display: none;
+    }
+
+    &:after {
+        content:'';
+        position: absolute;
+        z-index:5;
+        top:50%;
+        left:50%;
+        margin:-24px 0 0 -31px;
+        background: url(%=staticPrefixForCss=%general/image.png) 0 0 no-repeat;
+        width:62px;
+        height:47px;
+    }
+}
+
+.news-main__content {
+    font-size: 13px;
+    line-height: 18px;
+
+    .special & {
+        font-size: $base-font-size_special;
+        line-height: normal;
+    }
+}

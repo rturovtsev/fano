@@ -1,0 +1,735 @@
+.search-filter {
+    margin-bottom:20px;
+
+    .special & {
+        font-family: $body-font-family;
+        letter-spacing: normal;
+    }
+}
+.search-filter-form {
+
+}
+
+.search-filter-main {
+    .show-structure {
+        margin-top:9px;
+    }
+}
+.search-filter-main-block {
+    border:1px solid $darkgray;
+    width: 76%;
+    height: 34px;
+    @extend .ib-t;
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+    }
+}
+.search-filter-main__text {
+    border: 0;
+    width: 94%;
+    padding: 4px 2% 4px;
+    font-size: 15px;
+    line-height: 32px;
+    color:$seablue;
+    height: 32px;
+    background: transparent;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+        background-color: $black;
+    }
+    .special.color3 & {
+        color: $specblue1;
+        background-color: $specblue2;
+    }
+
+}
+.search-filter-main__btn {
+    position: relative;
+    top:2px;
+    left:3px;
+    border:0;
+    background-color: #fff;
+    text-indent: -9999px;
+    overflow: hidden;
+    @include bg-svg($search-big);
+
+    .special & {
+        @include bg-svg($b_search-big);
+        background-color: transparent;
+    }
+    .special.color2 & {
+        @include bg-svg($w_search-big);
+        background-color: transparent;
+    }
+    .special.color3 & {
+        @include bg-svg($blue_search-big);
+        background-color: transparent;
+    }
+}
+.search-filter-main__btn,
+.ui-datepicker-trigger {
+    margin:0;
+    padding:0;
+}
+
+
+.search-filter-more {
+    background: #E4EAED;
+    margin-top:10px;
+    font-size: 0;
+    padding:20px 20px 18px;
+
+    .special & {
+        background-color: transparent;
+        border: 1px solid;
+    }
+}
+
+.search-filter-col {
+     @extend .ib-t;
+     width:200px;
+     font-size: 16px;
+     padding-left:22px;
+}
+.search-filter-col_one {
+    width:278px;
+    padding-right:22px;
+    padding-left:0;
+    position: relative;
+    &:after {
+        content:'';
+        position: absolute;
+        top:0;
+        right:0;
+        width:1px;
+        height:70px;
+        display: block;
+        background: $darkgray;
+
+        .special & {
+            background-color: $black;
+        }
+        .special.color2 & {
+            background-color: $white;
+        }
+        .special.color3 & {
+            background-color: $specblue1;
+        }
+    }
+    &.search-filter-col_line {
+        &:after {
+            height:24px;
+        }
+    }
+}
+.search-filter-col_two {
+    width:278px;
+    padding-right:22px;
+}
+
+.search-filter-item {
+    padding-bottom:20px;
+    position: relative;
+    &:last-child {
+        padding-bottom:0;
+    }
+}
+
+.search-filter-more__text,
+.search-filter-more__calendar {
+    border:1px solid $darkgray;
+    font-size:13px;
+    width:100%;
+    padding: 4px 2% 2px;
+    line-height: 16px;
+    color:$seablue;
+
+    .special & {
+        border-color: $black;
+        background-color: $white;
+        color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+        background-color: $black;
+        color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+        background-color: $specblue2;
+        color: $specblue1;
+    }
+}
+.search-filter-more__calendar {
+    padding-left:3%;
+    padding-right:3%;
+}
+
+
+.ui-selectmenu-button {
+    font-size: 13px;
+    border-radius: 0;
+    border-color:$darkgray;
+    background: #fff;
+
+    .special & {
+        border-color: $black;
+        background-color: transparent;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+    }
+
+    span.ui-selectmenu-text {
+        text-align: left;
+        padding: 4px 24px 2px 5px;
+        display: block;
+        line-height: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 13px;
+        color:$seablue;
+
+        .special & {
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+    }
+
+    .ui-icon.ui-icon-triangle-1-s {
+        right: 0;
+        top:0;
+        height:24px;
+        width:24px;
+        border-left:1px solid $darkgray;
+        margin-top: 0;
+
+        .special & {
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+
+        &:after {
+            content:'';
+            position: absolute;
+            left:6px;
+            top:9px;
+            @include css-triangle(5px, $darkgray, 'top');
+
+            .special & {
+                @include css-triangle(5px, $black, 'top');
+            }
+            .special.color2 & {
+                @include css-triangle(5px, $white, 'top');
+            }
+            .special.color3 & {
+                @include css-triangle(5px, $specblue1, 'top');
+            }
+        }
+        &:hover:after {
+            border-color:$blue transparent transparent transparent;
+        }
+    }
+}
+.ui-selectmenu-menu .ui-menu {
+    background: #fff;
+
+    .special & {
+        background-color: $white;
+    }
+    .special.color2 & {
+        background-color: $black;
+    }
+    .special.color3 & {
+        background-color: $specblue2;
+    }
+}
+.ui-menu .ui-menu-item {
+    font-size: 13px;
+    padding:6px 5px 4px;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+
+    &.ui-state-focus {
+        background: $lightgray;
+
+        .special & {
+            background-color: transparent;
+        }
+    }
+}
+
+.search-filter-item_calendar {
+    position: relative;
+    &:after {
+        content:'';
+        position: absolute;
+        right:24px;
+        top:0;
+        display: block;
+        background: $darkgray;
+        width:1px;
+        height:24px;
+
+        .special & {
+            background-color: $black;
+        }
+        .special.color2 & {
+            background-color: $white;
+        }
+        .special.color3 & {
+            background-color: $specblue1;
+        }
+    }
+}
+.form-calendar-block {
+    @extend .search-filter-item_calendar;
+    &:after {
+        height:28px;
+        right:28px;
+    }
+    .ui-datepicker-trigger {
+        top:8px;
+        right:8px;
+    }
+
+}
+
+.ui-datepicker-trigger {
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    @include bg-svg($calendar);
+    @extend .ib-m;
+    text-indent: -9999em;
+    overflow: hidden;
+    border:0;
+    background-color: #fff;
+    &:hover {
+        @include bg-svg($calendar_blue);
+    }
+    input:focus + & {
+        @include bg-svg($calendar_blue);
+    }
+}
+.ui-datepicker {
+    background: #fff;
+    font-size: 13px;
+    border-radius:0;
+    padding:0;
+    width:235px;
+    border:1px solid $fanoGray2;
+    box-shadow:2px 2px 5px 0 rgba(0,0,0,0.2);
+    margin-top:6px;
+
+    .special & {
+        border-color: $black;
+        font-family: $body-font-family;
+        letter-spacing: normal;
+    }
+    .special.color2 & {
+        border-color: $white;
+        background-color: $black;
+        box-shadow:2px 2px 5px 0 rgba(255,255,255,0.2);
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+        background-color: $specblue2;
+        box-shadow:2px 2px 5px 0 rgba(6,52,98,0.2);
+    }
+
+    &:before {
+
+        @include css-triangle(6px, $blue, 'bottom');
+        display: block;
+        position: absolute;
+        top:-12px;
+        left:50%;
+        margin-left:-5px;
+
+        .special & {
+            @include css-triangle(6px, $black, 'bottom');
+        }
+        .special.color2 & {
+            @include css-triangle(6px, $white, 'bottom');
+        }
+        .special.color3 & {
+            @include css-triangle(6px, $specblue1, 'bottom');
+        }
+    }
+    .ui-datepicker-prev, .ui-datepicker-prev-hover {
+        top:0;
+        left:0;
+        border:0;
+    }
+    .ui-datepicker-next, .ui-datepicker-next-hover {
+        top:0;
+        right:5px;
+        border:0;
+    }
+    .ui-datepicker-calendar {
+        thead tr {
+            background: #f4f4f4;
+            th {
+                color:$blue;
+                font-size: 11px;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                .special & {
+                    color:$black;
+                }
+                .special.color2 & {
+                    color:$black;
+                }
+                .special.color3 & {
+                    color:$specblue1;
+                }
+            }
+        }
+        td:first-child, th:first-child {
+            padding-left:5px;
+        }
+        td:last-child, th:last-child {
+            padding-right:5px;
+        }
+        td {
+            padding:0;
+            text-align: center;
+            width:33px;
+            span, a {
+                border:0;
+                text-align: center;
+                padding: 6px 0 4px;
+                font-size: 13px;
+                line-height: 15px;
+            }
+            &.ui-datepicker-today {
+                a {
+                    outline:1px solid $blue;
+
+                    .special & {
+                        outline-color: $black;
+                    }
+                    .special.color2 & {
+                        outline-color: $white;
+                    }
+                    .special.color3 & {
+                        outline-color: $specblue1;
+                    }
+                }
+            }
+            &.ui-datepicker-current-day,&:hover {
+                a {
+                    background: $blue;
+                    color:#fff;
+                    outline:1px solid $blue;
+
+                    .special & {
+                        outline-color: $black;
+                        background-color: $black;
+                        color: $white;
+                    }
+                    .special.color2 & {
+                        outline-color: $black;
+                        background: $white;
+                        color: $black;
+                    }
+                    .special.color3 & {
+                        outline-color: $specblue1;
+                        background: $specblue1;
+                        color: $specblue2;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border-radius:0;
+    background: $blue;
+    color:#fff;
+    border:0;
+
+    .special & {
+        background-color: $black;
+    }
+    .special.color2 & {
+        background-color: $white;
+        color: $black;
+    }
+    .special.color3 & {
+        background-color: $specblue1;
+        color: $specblue2;
+    }
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-size:15px;
+    font-weight: normal;
+}
+
+.ui-icon-circle-triangle-w {
+    text-indent: -9999em;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-right: 6px solid #FFFFFF;
+        border-bottom: 6px solid transparent;
+
+        .special.color2 & {
+            border-right-color: $black;
+        }
+        .special.color3 & {
+            border-right-color: $specblue2;
+        }
+    }
+    &:after {
+        position: absolute;
+        left: 6px;
+        top: 3px;
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-right: 6px solid #0276bc;
+        border-bottom: 6px solid transparent;
+
+        .special & {
+            border-right-color: $black;
+        }
+        .special.color2 & {
+            border-right-color: $white;
+        }
+        .special.color3 & {
+            border-right-color: $specblue1;
+        }
+    }
+}
+
+.ui-icon-circle-triangle-e {
+    text-indent: -9999em;
+    position: relative;
+    &:before, &:after {
+        position: absolute;
+        right:6px;
+        top:3px;
+    }
+    &:before {
+        content: "";
+        right: 4px;
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-left: 6px solid #FFFFFF;
+        border-bottom: 6px solid transparent;
+
+        .special.color2 & {
+            border-left-color: $black;
+        }
+        .special.color3 & {
+            border-left-color: $specblue2;
+        }
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-left: 6px solid #0276bc;
+        border-bottom: 6px solid transparent;
+
+        .special & {
+            border-left-color: $black;
+        }
+        .special.color2 & {
+            border-left-color: $white;
+        }
+        .special.color3 & {
+            border-left-color: $specblue1;
+        }
+    }
+}
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    margin-top:-5px;
+    margin-left:-5px;
+}
+
+.search-filter-result {
+    @extend .cf;
+    margin:20px 0 25px;
+}
+.search-filter-total {
+    float:left;
+    font-size: 13px;
+    b {
+        font-weight: normal;
+        font-size: 18px;
+        margin-left:5px;
+    }
+}
+
+.search-filter-options {
+    float:right;
+}
+
+.search-filter-option {
+    label {
+        @extend .ib-m;
+        font-size: 13px;
+        margin:2px 5px 0 0;
+    }
+    select, .ui-selectmenu-button {
+        @extend .ib-m;
+    }
+}
+.filter-select-pages {
+    width:60px;
+}
+
+
+.search-filter-more_departments {
+    .search-filter-col_one {
+        width:278px;
+    }
+    .search-filter-col_two {
+        padding-right:0;
+        width:400px;
+    }
+}
+
+.search-filter-more_press {
+    .search-filter-col_one {
+        padding-right:0;
+        width:230px;
+        &:after {
+            display: none;
+        }
+    }
+    .search-filter-col_two {
+        width:278px;
+    }
+}
+
+.tabs.fake-tabs {
+    margin:20px 0 0;
+    border-top: 2px solid #b0bec5;
+    border-bottom: 1px solid #e1e6e9;
+
+    .special & {
+        border-color: $black;
+        font-family: $body-font-family;
+        letter-spacing: normal;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+    }
+
+    .tabs-handles {
+        border:0;
+        display: inline-block;
+    }
+    .show-structure {
+        margin:20px 10px 0 0;
+    }
+}
+
+.search-filter_gray {
+    background: #E4EAED;
+
+    .special & {
+        background-color: transparent;
+    }
+
+    .search-filter-main {
+        padding: 20px 20px 0 20px;
+
+        .special & {
+            border-top: 1px solid;
+            border-left: 1px solid;
+            border-right: 1px solid;
+        }
+    }
+    .search-filter-main-block {
+        background: #fff;
+        width:100%;
+
+        .special & {
+            background-color: transparent;
+        }
+
+        .search-filter-main__text {
+            width:95%;
+        }
+    }
+    .search-filter-more {
+        margin-top:0;
+
+        .special & {
+            border-top: 0;
+        }
+    }
+}
+
+.ui-selectmenu-menu.form-select-filter {
+    // width:256px;
+    .ui-menu .ui-menu-item {
+        padding:5px 5px 4px;
+        font-size: 13px;
+    }
+}
+
+.ui-selectmenu-menu.ui-state-default {
+    box-shadow:none;
+}
+

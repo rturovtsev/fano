@@ -1,0 +1,96 @@
+include ../paginator/paginator
+include ../filter/filter
+mixin page_departments_list(data)
+    section.page-content
+        header.page-content-header
+            h1 Наименование управления
+
+        +filter('departments')
+        
+        ul.large-links-list
+            li
+                a(href="#") Уральское территориальное управление
+            li
+                a(href="#") Сибирское территориальное управление
+            li
+                a(href="#") Дальневосточное территориальное управление
+        br
+        br
+        br
+        br
+        .row
+            .large-6.small-6.column
+                ul.large-links-list
+                    li
+                        a(href="#") Уральское территориальное управление
+                    li
+                        a(href="#") Сибирское территориальное управление
+                    li
+                        a(href="#") Дальневосточное территориальное управление
+            .large-6.small-6.column
+                 ul.large-links-list
+                    li
+                        a(href="#") Уральское территориальное управление
+                    li
+                        a(href="#") Сибирское территориальное управление
+                    li
+                        a(href="#") Дальневосточное территориальное управление
+        br
+        br
+        br
+        br
+        .row.departments-list-grid
+            .large-6.small-6.column
+                .departments-list-grid-item
+                    .departments-list-grid_header
+                        h3 Управление методологии, программ и проектов
+                    div.structure-item
+                        a.structure-item__image(href="#")
+                            img(src="%=staticPrefix=%img/content/str2.jpg", alt="")
+                        div.structure-item__text
+                            a.structure-item__name(href="#") 
+                                | Медведев Михаил Михайлович
+                            span.structure-item__job
+                                | первый заместитель руководителя
+
+            .large-6.small-6.column
+                 .departments-list-grid-item
+                    .departments-list-grid_header
+                        h3 Управление методологии, программ и проектов
+                    div.structure-item
+                        a.structure-item__image(href="#")
+                            img(src="%=staticPrefix=%img/content/str2.jpg", alt="")
+                        div.structure-item__text
+                            a.structure-item__name(href="#") 
+                                | Медведев Михаил Михайлович
+                            span.structure-item__job
+                                | первый заместитель руководителя первый заместитель руководителя первый заместитель руководителя первый заместитель руководителя
+            .clear
+            .large-6.small-6.column
+                .departments-list-grid-item
+                    .departments-list-grid_header
+                        h3 Управление методологии, программ и проектов
+                    div.structure-item
+                        a.structure-item__image(href="#")
+                            img(src="%=staticPrefix=%img/content/str2.jpg", alt="")
+                        div.structure-item__text
+                            a.structure-item__name(href="#") 
+                                | Медведев Михаил Михайлович
+                            span.structure-item__job
+                                | первый заместитель руководителя
+
+            .large-6.small-6.column
+                 .departments-list-grid-item
+                    .departments-list-grid_header
+                        h3 Управление координации и обеспечения деятельности организаций в фере медицинских наук, охраны, здоровья, образования и культруры
+                    div.structure-item
+                        a.structure-item__image(href="#")
+                            img(src="%=staticPrefix=%img/content/str2.jpg", alt="")
+                        div.structure-item__text
+                            a.structure-item__name(href="#") 
+                                | Медведев Михаил Михайлович
+                            span.structure-item__job
+                                | первый заместитель руководителя
+            .clear
+            
+        

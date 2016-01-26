@@ -1,0 +1,8 @@
+mixin banners(data)
+    section.banners
+       ul.banners-list.row
+            each val in data.links
+                li.large-3.small-3.columns
+                    a.banners__item(href=val.url)
+                        span.banners__title #{val.title}
+                        span.banners__link #{val.link}   

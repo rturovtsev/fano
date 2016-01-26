@@ -1,0 +1,120 @@
+mixin navigation2(data, active)
+    div.navigation
+        a.hamburger-icon.js-navigation-handle
+        ul.navigation-menu
+            each val in data.links 
+                if (active != "" && active == val.name)
+                    li.navigation-item.navigation-item_active
+                        span=val.title 
+                else
+                    li.navigation-item
+                        a(href=val.url)=val.title 
+        div#js-navigation-hidden.navigation-hidden.navigation-hidden_3col
+            .row
+                .column.small-4.large4
+                    .navigation-3col-wrap
+                        h2 О ФАНО России
+                        ul.navigation-menu-hidden_3col
+                            li
+                                a(href="#") О ФАНО России
+                            li
+                                a(href="#") Руководство
+                            li
+                                a(href="#") Центральный аппарат
+                            li
+                                a(href="#") Территориальные управления
+                            li
+                                a(href="#") Подведомственные организации
+                            li
+                                a(href="#") Госслужба в ФАНО России
+                            li
+                                a(href="#") Государственные услуги и функции
+                            li
+                                a(href="#") Контакты
+                            li
+                                a(href="#") Документы
+                            li
+                                a(href="#") Проекты документов
+                    .navigation-3col-wrap
+                        h2 Руководство
+                        ul.navigation-menu-hidden_3col
+                            li
+                                a(href="#") Планы нормотворческой деятельности
+                            li
+                                a(href="#") Антикоррупционная экспертиза
+                            li
+                                a(href="#") Научно-координационный совет
+                            li
+                                a(href="#") Организация и проведение научных исследований
+                            li
+                                a(href="#") Развитие кадрового потенциала научных организаций
+                            li
+                                a(href="#") Исследовательская инфраструктура научных организаций
+                            li
+                                a(href="#") Информационное обеспечение научных организаций
+                    
+                    .navigation-3col-wrap
+                        h2 Новости
+                        ul.navigation-menu-hidden_3col
+                            li
+                                a(href="#") Новости
+                            li
+                                a(href="#") Информация для СМИ
+                            li
+                                a(href="#") Подписка
+                            li
+                                a(href="#") Новости
+                            li
+                                a(href="#") Инновации/коммерциализация разработок научных организаций
+                            li
+                                a(href="#") Развитие имущественного комплекса научных организаций
+                    .navigation-3col-wrap
+                        h2 Подписка
+                        ul.navigation-menu-hidden_3col  
+                            li
+                                a(href="#") Информация для СМИ
+                            li
+                                a(href="#") Подписка
+                            li
+                                a(href="#") Планирование деятельности
+                            li
+                                a(href="#") Контрольно-ревизионная деятельность
+                            li
+                                a(href="#") Госзакупки
+                            li
+                                a(href="#") Противодействие коррупции
+                            li
+                                a(href="#") Координационные и совещательные органы
+                            li
+                                a(href="#") Открытые данные
+                
+                    .navigation-3col-wrap
+                        h2 Планирование
+                        ul.navigation-menu-hidden_3col
+                            li
+                                a(href="#") Планирование деятельности
+                            li
+                                a(href="#") Контрольно-ревизионная деятельность
+                            li
+                                a(href="#") Госзакупки
+                            li
+                                a(href="#") Противодействие коррупции
+                            li
+                                a(href="#") Координационные и совещательные органы
+                            li
+                                a(href="#") Открытые данные
+                    .navigation-3col-wrap
+                        h2 Руководство
+                        ul.navigation-menu-hidden_3col  
+                            
+                            li
+                                a(href="#") Бюджетирование научных организаций
+                            li
+                                a(href="#") Система управления научных организаций
+                            li
+                                a(href="#") Взаимодействие научных организаций с ФАНО России
+                            li
+                                a(href="#") Международная деятельность научных организаций
+                            li
+                .column.small-4.large4#js-navigation-hidden-col2
+                .column.small-4.large4#js-navigation-hidden-col3

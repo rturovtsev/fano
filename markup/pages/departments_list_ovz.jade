@@ -1,0 +1,8 @@
+include ../modules/special_pane/special_pane
+
+extends  ./departments_list.jade
+block vars
+    - special = true;
+
+block special_pane
+    +special_pane

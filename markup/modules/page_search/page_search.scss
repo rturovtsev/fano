@@ -1,0 +1,53 @@
+.search-list {
+    font-size:15px;
+
+    .search-list-item_LIBRARY {
+        @extend .anons-list_icon;
+        &:before {
+            @include bg-svg($doc);
+        }
+    }
+    .search-list-item_FAQ {
+        @extend .anons-list_icon;
+        &:before {
+            width:33px;
+            height:33px;
+            background: url(%=staticPrefixForCss=%general/question.png) 0 0 no-repeat;
+        }
+    }
+
+    .search-list-item_PRESS_CENTER {
+        margin-bottom:40px;
+        .news-list__title {
+            @include black-link-decorated;
+            display: inline;
+            font-size: 19px;
+            line-height: 24px;
+            font-weight: bold;
+        } 
+        .news-list__content {
+            margin-top:10px;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+}
+
+.filter-select-search {
+    width:200px;
+}
+
+.anons-list li.search-list-item {
+    margin-bottom:30px;
+}
+.search-list-item .news-list__title {
+    font-size:19px;
+}
+
+.search-list-item .news-main__stat {
+    margin-bottom:5px;
+}
+
+.search-list-item time {
+    margin-bottom:0;
+}

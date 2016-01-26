@@ -1,0 +1,29 @@
+.navigation-hidden {
+    h2 {
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 0 0 10px;
+        color: #0276bc;
+    }
+}
+.navigation-3col-wrap {
+    + .navigation-3col-wrap {
+        margin-top:25px;
+    }
+}
+
+.navigation-menu-hidden_3col {
+    @include nl;
+    li {
+        margin-bottom:8px;
+        font-size: 13px;
+    }
+    a {
+        @include black-link-decorated;
+        color:#000;
+        &:visited {
+            color:#000;
+        }
+    }
+}

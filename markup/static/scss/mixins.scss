@@ -1,0 +1,125 @@
+// Mixins.
+
+@mixin nl {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    list-style-position: outside;
+}
+
+@mixin cf {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .lt-ie8 & {
+        zoom: 1;
+    }
+}
+
+@mixin blocks-justify {
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+// You can add your own mixins here:
+
+@mixin ib-m {
+    display: inline-block;
+    vertical-align: middle;
+}
+@mixin ib-t {
+    display: inline-block;
+    vertical-align: top;
+}
+@mixin ib-b {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.ib-m {
+  @include ib-m;
+}
+.ib-t {
+  @include ib-t;
+}
+.ib-b {
+  @include ib-b;
+}
+.cf {
+  @include cf;
+}
+
+@mixin smart-underline($background: #fff, $text: #000, $selection: blue, $position: 100%){
+  
+    color: $text;
+    text-decoration: none;
+    background: linear-gradient($background, $background) no-repeat scroll 0 95% / 0.05em 1px, linear-gradient($background, $background) no-repeat scroll 100% 95% / 0.05em 1px, rgba(0, 0, 0, 0) linear-gradient($text, $text) repeat-x scroll 0 95% / 1px 1px;
+
+    &::selection, span::selection, span.blog-anons__mark::selection {
+      text-shadow: none;
+      background: $selection;
+    }
+    &::-moz-selection {
+      text-shadow: none;
+      background: $selection;
+    }
+    &:before, &:after, *:before, *:after, .blog-anons__mark {
+      text-shadow: none;
+    }
+    &:visited {
+      color: $text;
+    }
+    &:hover {
+        background:none;
+    }
+
+    .ie9 & {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+}
+
+@mixin smart-underline-not($background: #fff, $text: #000, $selection: blue, $position: 100%){
+  
+    color: $text;
+    text-decoration: none;
+    background:none;
+
+    &::selection, span::selection, span.blog-anons__mark::selection {
+      text-shadow: none;
+      background: $selection;
+    }
+    &::-moz-selection {
+      text-shadow: none;
+      background: $selection;
+    }
+    &:before, &:after, *:before, *:after, .blog-anons__mark {
+      text-shadow: none;
+    }
+    &:visited {
+      color: $text;
+    }
+    &:hover {
+        background: linear-gradient($background, $background) no-repeat scroll 0 95% / 0.05em 1px, linear-gradient($background, $background) no-repeat scroll 100% 95% / 0.05em 1px, rgba(0, 0, 0, 0) linear-gradient($text, $text) repeat-x scroll 0 95% / 1px 1px;
+        text-decoration: none;
+    }
+
+    .ie9 & {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+}

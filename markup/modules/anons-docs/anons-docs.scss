@@ -1,0 +1,36 @@
+.doc-links {
+	margin:10px 0 0;
+	font-size: 15px;
+	a {
+		@include gray-link-decorated;
+        color:$seablue;
+		margin-right:20px;
+
+        .special & {
+            display: inline-block;
+            font-size: 2.2rem;
+            color: $black;
+            background: none;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        .special .anons-list_docs &,
+        .special .anons-list_questions & {
+            font-size: 1.9rem;
+        }
+
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+
+        &.no-decoration {
+            @include gray-link;
+        }
+	}
+}

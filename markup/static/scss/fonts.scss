@@ -1,0 +1,56 @@
+/* Your custom fonts here */
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/LatoLight/LatoLight.eot');
+    src: url('../fonts/LatoLight/LatoLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LatoLight/LatoLight.woff') format('woff');
+    font-weight: 100;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+}
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/LatoRegular/LatoRegular.eot');
+    src: url('../fonts/LatoRegular/LatoRegular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LatoRegular/LatoRegular.woff') format('woff');
+    font-weight: normal;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/LatoBold/LatoBold.eot');
+    src: url('../fonts/LatoBold/LatoBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/LatoBold/LatoBold.woff') format('woff');
+    font-weight: bold;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot');
+    src: url('../fonts/RobotoCondensedRegular/RobotoCondensedRegular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensedRegular/RobotoCondensedRegular.woff') format('woff');
+    font-weight: normal;       // For normal width. It could has another value
+    font-style: normal;     // Also could has another value
+}
+
+@font-face{
+   font-family: 'WebSymbolsLigaRegular';
+      src: url('../fonts/WebSymbolsLigaRegular/websymbolsligaregular.eot');
+      src: url('../fonts/WebSymbolsLigaRegular/websymbolsligaregular.eot?#iefix') format('embedded-opentype'),
+           url('../fonts/WebSymbolsLigaRegular/websymbolsligaregular.woff') format('woff'),
+           url('../fonts/WebSymbolsLigaRegular/websymbolsligaregular.ttf') format('truetype'),
+           url('../fonts/WebSymbolsLigaRegular/websymbolsligaregular.svg#WebSymbolsRegular') format('svg');
+}
+
+
+// Var for using custom font
+$Lato: 'Lato', Helvetica, Arial, sans-serif;
+$Roboto: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+$Liga: 'WebSymbolsLigaRegular';
+$Arial: Arial;
+$Times: 'Times New Roman';

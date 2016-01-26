@@ -1,0 +1,126 @@
+.paginator {
+
+}
+.pages, .content ul.pages {
+    @include nl;
+    margin-top:30px;
+    &:before {
+        content:'';
+        width:300px;
+        height:1px;
+        display: block;
+        background: $gray;
+        margin-bottom:20px;
+
+        .special & {
+            background-color: $black;
+        }
+        .special.color2 & {
+            background-color: $white;
+        }
+        .special.color3 & {
+            background-color: $specblue1;
+        }
+    }
+    li {
+        @extend .ib-m;
+        font-size: 15px;
+        line-height: 17px;
+        margin:0 5px;
+        padding-left:0;
+        a, span {
+            @extend .ib-m;
+        }
+        &.pages-item_first,
+        &.pages-item_last {
+            a {
+                font-family:$Liga;
+                margin-top:-5px;
+                border-bottom:1px solid transparent;
+            }
+        }
+        &.pages-item_first {
+            a {
+               &:before {
+                    content:'\00D4';
+                }
+            }
+
+        }
+        &.pages-item_last {
+            a {
+                &:before {
+                    content:'\00D7';
+                }
+            }
+        }
+        a {
+            color:$blue;
+            border-bottom:1px solid;
+            text-decoration: none;
+
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+
+            &:visited {
+                color:$darkgray;
+            }
+            &.disabled {
+                color:#DADADA;
+                cursor:default;
+            }
+        }
+        span {
+            color:$seablue;
+            border-bottom:1px solid transparent;
+
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.paginator-full, .content .paginator-full {
+    text-align: center;
+    border-bottom:1px solid $gray;
+    padding-bottom:20px;
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+    }
+
+    .pages {
+        &:before {
+            width:100%;
+        }
+    }
+
+}
+
+.js-paging-in {
+    margin-bottom:30px;
+}

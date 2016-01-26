@@ -1,0 +1,256 @@
+.slider, .slider * {
+    /*transition: width 0.5s;
+    transition: height 0.5s;*/
+}
+
+
+.flexslider {
+    margin-bottom:30px;
+}
+.flex-caption-block {
+    position: absolute;
+    bottom:0;
+    z-index:100;
+    width:100%;
+    height:64px;
+}
+
+.flex-change-size {
+    @include bg-svg($gallery_small);
+    display:block;
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    cursor:pointer;
+    opacity:0.9;
+    &:hover {
+        opacity:1;
+    }
+}
+
+.flex-caption, .content p.flex-caption  {
+    position: absolute;
+    bottom:0;
+    z-index:101;
+    width:100%;
+    color:#fff;
+    background: rgba(56, 72, 79, 0.7);
+    margin:0 !important;
+    font-size: 13px;
+    line-height: 18px;
+    padding:15px 130px 10px 80px;
+    height:64px;
+    > div {
+        height:2.5em;
+        overflow: hidden;
+    }
+}
+
+.flex-counter {
+    position: absolute;
+    right:15px;
+    top:15px;
+    color:#fff;
+    font-weight:100;
+    font-size: 0;
+}
+
+.flex-counter-prev,
+.flex-counter-text,
+.flex-counter-next {
+    @extend .ib-m;
+    font-size: 23px;
+    line-height: 1em;
+}
+.flex-counter-prev,
+.flex-counter-next {
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.flex-counter-prev {
+    @include bg-svg($gallery-left-small);
+    opacity:0.8;
+    &:hover {
+        opacity:1;
+    }
+}
+.flex-counter-next {
+    @include bg-svg($gallery-right-small);
+    opacity:0.8;
+    &:hover {
+        opacity:1;
+    }
+}
+
+.flex-counter-text {
+    margin:0 10px;
+    opacity:0.9;
+}
+.flex-direction-nav a {
+    text-indent: -9999em;
+    margin-top:-48px;
+
+    &:before {
+        display: none;
+    }
+    &.flex-next {
+        @include bg-svg($gallery-right);
+        text-align: left;
+    }
+    &.flex-prev {
+        @include bg-svg($gallery-left);
+    }
+}
+
+/*.flexslider .slides {
+    li {
+        text-align: center;
+        img {
+            width:auto;
+            height:451px;
+            margin:auto;
+        }
+        .flex-caption {
+            text-align: left;
+        }
+    }
+}*/
+
+.slider_nozoom .flex-caption {
+    padding-left:20px;
+}
+
+.slider-small {
+    margin:0 20px 20px 0;
+    width:357px;
+    float:left;
+
+    .special & {
+        display: none;
+    }
+
+    .flexslider {
+        margin-bottom:50px;
+    }
+    .flex-change-size {
+        @include bg-svg($gallery_full);
+    }
+    .flex-direction-nav a.flex-next,
+    .flex-direction-nav a.flex-prev {
+        transform:scale(0.7);
+        margin-top:-29px;
+    }
+    .flexslider:hover .flex-direction-nav .flex-prev {
+        left:3px;
+    }
+    .flexslider:hover .flex-direction-nav .flex-next {
+        right:3px;
+    }
+
+    .flex-caption {
+        height:33px;
+        overflow: visible;
+        div {
+            position: absolute;
+            top:45px;
+            color:$seablue;
+            margin:0 0 0 -80px;
+            height:4em;
+            overflow: hidden;
+        }
+    }
+    .flex-caption-block {
+        height:33px;
+    }
+    .flex-change-size {
+        left:7px;
+        top:7px;
+    }
+    .flex-counter {
+        top:7px;
+        right:7px;
+        .flex-counter-prev,
+        .flex-counter-next   {
+            transform:scale(0.7);
+        }
+        .flex-counter-text {
+            font-size: 14px;
+            margin: 0 6px;
+        }
+    }
+    &.slider_nocaption .flexslider {
+        margin-bottom:0;
+    }
+    /*.slides {
+        li {
+            img {
+                height:217px;
+            }
+        }
+    }*/
+}
+
+
+.slider-small_padding {
+     margin-bottom:0;
+    .flex-caption div {
+        height:2.8em;
+    }
+    .flexslider {
+        margin-bottom:45px;
+    }
+} 
+
+.slider-small_static {
+    margin-bottom:10px;
+    &.slider-small .flexslider {
+        margin-bottom:0;
+    }
+    .flex-caption-block {
+        bottom:auto;
+        top:400px;
+    }
+    /*.flexslider .slides img {
+        height:463px;
+    }
+    &.slider-small .flexslider .slides img {
+        height:227px;
+    }*/
+    &.slider-small .flex-caption-block {
+        bottom:auto;
+        top:193px;
+    }
+    .flex-caption {
+        top:-64px;
+    }
+    &.slider-small {
+        .flex-caption {
+            top:-33px;
+        }
+        .flex-static {
+            color:$seablue;
+            position: static;
+            margin:0;
+            height:auto;
+        }
+    }
+}
+
+.flex-caption-static {
+    position: relative;
+    .flex-caption {
+        bottom:auto;
+    }
+    .flex-static {
+        padding-top:10px;
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0 20px 0 79px;
+        position: absolute;
+        top: -57px;
+        color: #fff;
+        z-index: 112;
+        height: 3.5em;
+        overflow: hidden;
+    }
+}

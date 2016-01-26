@@ -1,0 +1,63 @@
+mixin special_pane
+    .page__inside
+        .special_pane#special_pane
+            .fontsize
+               .dt Размер шрифта:
+               .dd
+                    a.a-fontsize.a-fontsize-small.active(href='#', data-fontsize='1')
+               .dd
+                    a.a-fontsize.a-fontsize-normal(href='#', data-fontsize='2')
+               .dd
+                    a.a-fontsize.a-fontsize-big(href='#', data-fontsize='3')
+            .colors
+                .dt Цвета сайта
+                .dd
+                    a.a-color.a-color1.active(href='#', data-color='1')
+                .dd
+                    a.a-color.a-color2(href='#', data-color='2')
+                .dd
+                    a.a-color.a-color3(href='#', data-color='3')
+            .default-version
+                a#a-default-version.a-default-version(href="/")
+                    span.icon-link_special
+                    |Обычная версия
+
+            .special-help
+                a.a-special-help(href="#") Помощь
+
+            .special-settings
+                a#a-special-settings.a-special-settings(href='#') Настройки
+
+            .popped
+                h2 Настройки шрифта:
+                p.choose-font-family
+                    |Выберите шрифт:
+                    a.a-font-family.active(data-font='1', href='#')
+                        |Arial
+                    a.a-font-family(data-font='2', href='#')
+                        |Times New Roman
+                p.choose-letter-spacing
+                    |Интервал между буквами (Кернинг):
+                    a.a-letter-spacing.active(data-spacing='1', href='#')
+                        |Стандартный
+                    a.a-letter-spacing(data-spacing='2', href='#')
+                        |Средний
+                    a.a-letter-spacing(data-spacing='3', href='#')
+                        |Большой
+                h2 Выбор цветовой схемы:
+                ul.choose-colors
+                    li.li-color.li-color1
+                        a(data-color='1', href='#')
+                            |Черным по белому
+                    li.li-color.li-color2
+                        a(data-color='2', href='#')
+                            |Белым по черному
+                    li.li-color.li-color3
+                        a(data-color='3', href='#')
+                            |Темно-синим по голубому
+
+                .saveit
+                    a.btn_special.closepopped(href='#')
+                        |Закрыть панель
+                    a.btn_special.default(href='#')
+                        |Вернуть стандартные настройки

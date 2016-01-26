@@ -1,0 +1,152 @@
+include ../paginator/paginator
+
+mixin page_feedback(data)
+	section.page-content
+		header.page-content-header
+			h1 Электронное обращение
+
+		div.tabs.js-tabs
+			ul.tabs-handles
+				li.tabs-handles-item.tabs-handles-item_active
+					a(href="#physic").js-tabs-handle
+						| Физическое лицо
+				li.tabs-handles-item
+					a(href="#uri").js-tabs-handle
+						| Юридическое лицо
+
+
+			div.tabs-contents
+				div.tab-contents-item.js-tabs-item#js-tab-physic
+					form.form(action="")#feedback-form
+						fieldset.form-fieldset
+							h2 Заявитель
+							.row.row-9.form-row
+								.column.large-3.small-3
+									.form-wrap
+										label(for="surname").required Фамилия
+										input.form-text#surname(type="text", name="surname", required)
+								.column.large-3.small-3
+									.form-wrap
+										label(for="name").required Имя
+										input.form-text#name(type="text", name="name", required)
+								.column.large-3.small-3
+									.form-wrap
+										label(for="patronym").required Отчество
+										input.form-text#patronym(type="text", name="patronym", required)
+						fieldset.form-fieldset
+							h2 Место жительства
+							.row.row-9.form-row
+								.column.large-6.small-6
+									.form-wrap
+										label(for="subject").required Субъект Российской Федерации
+										select.form-select.js-select#subject(data-menuclass="form-select-6", required)
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+											option 1
+											option 2
+											option 3
+
+								.column.large-3.small-3
+									.form-wrap
+										label(for="index").required Индекс
+										input.form-text#index(type="text", name="index", required)
+							.row.row-9.form-row
+								.column.large-3.small-3
+									.form-wrap
+										label(for="city").required Город
+										input.form-text#city(type="text", name="city", required)
+								.column.large-6.small-6
+									.form-wrap
+										label(for="address").required Адрес
+										input.form-text#address(type="text", name="address", required)
+						fieldset.form-fieldset
+							h2 Контактные данные
+							.row.row-9.form-row
+								.column.large-3.small-3
+									.form-wrap
+										label(for="phone") Контактный телефон
+										input.form-text#phone(type="text", name="phone")
+								.column.large-3.small-3.end
+									.form-wrap
+										label(for="email").required E-mail
+										input.form-text#email(type="text", name="email", required)
+						fieldset.form-fieldset
+							h2 Обращение
+								span.required *
+							.row.row-9.form-row
+								.column.large-9.small-9
+									.form-wrap
+										label(for="message") Не более 5000 символов
+										textarea.form-textarea#message(required)
+										.form-note
+											input.form-file-inline.js-hidden(type="file" value="Прикрепить файл")
+											a(href="#") Прикрепить файл
+											|  не более 5 Мб
+							.row.row-9.form-row
+								.column.large-9.small-9
+									.form-wrap
+										label(for="qwerty").required В какие органы государственной власти Вы обращались и когда
+										input.form-text#qwerty(type="text", name="qwerty", required)
+							.row.row-9.form-row
+								.column.large-9.small-9
+									.form-wrap.spec_nonsizing
+										input.form-checkbox#onemail2(type="checkbox", name="answer2")
+										label.form-checkbox-label(for="onemail2") На электронную почту
+							.row.row-9.form-row
+								.column.large-9.small-9
+									.form-wrap
+										label(for="qwerty").required Дата публикации до
+										.form-calendar-block
+											input.form-text.form-calendar(type="text", required)
+
+
+						fieldset.form-fieldset
+							h2 Получить ответ
+							.form-label.required Выберите в какой форме вы хотите получить ответ:
+							.row.row-9.form-row
+								.column.large-3.small-3
+									.form-wrap.spec_nonsizing
+										input.form-radio#onemail(type="radio", name="answer")
+										label.form-radio-label(for="onemail") На электронную почту
+								.column.large-3.small-3.end
+									.form-wrap.spec_nonsizing
+										input.form-radio#onmail(type="radio", name="answer")
+										label.form-radio-label(for="onmail") В письменной форме
+						.row.row-9.form-row
+							.column.large-3.small-3.end
+								div.form-captcha-block
+									label.form-label.required Введите контрольные символы
+									div.form-captcha-line
+										input.form-text.form-text__captcha(type="text", required)
+										img.form-captcha(src="%=staticPrefix=%img/content/getcaptcha.jpg", alt="")
+
+						.form-footer
+							input.form-button(type="submit", value="Отправить")
+							input.form-button.form-button__gray(type="reset", value="Очистить")
+
+
+
+				div.tab-contents-item.js-tabs-item#js-tab-uri.js-hidden
+
+
+
+

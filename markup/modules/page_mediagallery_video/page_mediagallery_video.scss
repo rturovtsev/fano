@@ -1,0 +1,14 @@
+.mejs-container {
+    margin-bottom:150px;
+
+    .special & {
+        display: none;
+    }
+}
+.mejs-playlist {
+    margin-top:470px;
+    height:95px !important;
+    overflow-y:auto;
+    opacity:1;
+    border-bottom:2px solid $seablue;
+}

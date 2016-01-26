@@ -1,0 +1,84 @@
+.structure-head-card {
+    position: relative;
+}
+.structure-head-card__image {
+    @extend .ib-b;
+}
+.structure-head-card__job {
+    @extend .ib-b;
+    font-size: 22px;
+    line-height: 22px;
+    width:400px;
+    margin-left:20px;
+    margin-bottom: -4px;
+
+    .special & {
+        display: block;
+        width: auto;
+        margin-left: 0;
+        font-size: 2.2rem;
+        line-height: normal;
+    }
+}
+
+.tabs {
+    margin:30px 0 50px;
+}
+    .tabs-handles {
+        border-top:2px solid $darkgray;
+        border-bottom:1px solid $gray;
+        @extend .navigation-menu;
+
+        .special & {
+            border-color: $black;
+            font-family: $body-font-family;
+            letter-spacing: normal;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+
+        li {
+            font-size: 14px;
+            &:first-child {
+                padding-left:0;
+            }
+        }
+        .tabs & {
+            display: block;
+        }
+    }
+    .tabs-handles-item a {
+        color:$darkgray;
+    }
+    .tabs-handles-item_active a {
+        color:$blue;
+        border-bottom:3px solid $blue;
+        padding-bottom:17px;
+
+        .special & {
+            color: $black;
+            border-color: $black;
+            font-weight: bold;
+        }
+        .special.color2 & {
+            color: $white;
+            border-color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+            border-color: $specblue1;
+        }
+    }
+    .tab-contents-item {
+        padding-top:30px;
+        > h2:first-child, > h3:first-child {
+            margin-top:0;
+        }
+    }
+.tabs-handles_full {
+    display: block;
+}

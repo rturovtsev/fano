@@ -1,0 +1,49 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/header/header
+include ../modules/navigation/navigation
+include ../modules/side_navigation/side_navigation
+include ../modules/page_questions/page_questions
+
+head
+        +head(head.defaults)
+
+block vars
+
+body.page(class= (special == true) ? "special" : "")
+    block special_pane
+    div.page__wrapper
+        div.page__inside
+            +header(true)
+        div.page__navigation-wrapper
+            div.page__inside
+                +navigation(navigation.default, "documents")
+        div.page__inside
+            .page__breadcrumbs
+                ul.breadcrumbs
+                    li
+                        a(href="#") Пресс-центр
+                    li
+                        span Популярные вопросы
+
+            .row.page__body
+                    .column.large-3.small-3.page__left
+                        +side_navigation(side_navigation.documents)
+
+                    .column.large-9.small-9.page__right
+                        +page_questions
+
+
+        .page__buffer
+    +footer
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=staticPrefix=%js/separate-js/jquery-latest.min.js')
+    script(src='%=staticPrefix=%js/main%=hash=%%=min=%.js')
+    script(src='%=staticPrefix=%js/separate-js/script.js')

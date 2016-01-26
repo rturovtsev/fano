@@ -1,0 +1,37 @@
+.header-logo {
+    width:455px;
+    display: block;
+    text-decoration: none;
+}
+    .header-logo__image {
+        margin-right:2%;
+        margin-top:-7px;
+        @extend .ib-m;
+    }
+    .header-logo__text {
+        width:65%;
+        @extend .ib-m;
+        color:$black;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        border-left:2px solid $black;
+        padding:5px 0 5px 15px;
+        margin-left:5px;
+        text-transform: uppercase;
+        b {
+            text-transform: none;
+            font-size:23px;
+            display: block;
+            margin-bottom:8px;
+        }
+        .special & {
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+    }

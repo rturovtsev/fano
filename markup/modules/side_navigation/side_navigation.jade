@@ -1,0 +1,12 @@
+mixin side_navigation(data)
+	navigation.side-navigation
+		header 
+			h2 #{data.title}
+		ul.side-navigation-list
+			each val in data.links 
+				if val.active
+					li.side-navigation-item.side-navigation-item_active
+						span=val.title 
+				else
+					li.side-navigation-item
+						a(href=val.url)=val.title 

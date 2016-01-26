@@ -1,0 +1,145 @@
+.page-content_one {
+    padding-bottom:50px;
+    h1 {
+        font-size: 29px;
+        line-height: 34px;
+        letter-spacing: -1px;
+
+        .special & {
+            font-size: $h1-font-size_special;
+            line-height: normal;
+        }
+    }
+    h1 + .page-content-header__stats {
+        margin-top:-10px;
+    }
+    .page-content-header {
+        overflow: hidden;
+        margin-bottom:30px;
+    }
+}
+
+.page-content-rating {
+    float:right;
+    width:90px;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+
+.circle-rating {
+    width:50px;
+    height:50px;
+    position: relative;
+    color:$seablue;
+    margin-left:5px;
+
+    .special & {
+        color: $black;
+        font-family: $body-font-family;
+        letter-spacing: normal;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+
+    strong {
+        position: absolute;
+        top: 12px;
+        left: 9px;
+        font-size: 23px;
+        font-weight: 100;
+    }
+    span {
+        position: absolute;
+        bottom: 0;
+        left: 54px;
+        font-size: 13px;
+        font-weight: 100;
+    }
+}
+
+.star-rating {
+    margin-top:18px;
+}
+.star-rating__header, .content p.star-rating__header {
+    font-size: 13px;
+}
+
+.star-rating__list {
+    font-size: 0;
+    a {
+        font-family:$Liga;
+        text-decoration: none;
+        color:$darkgray;
+        font-size: 13px;
+        margin-right:5px;
+        &:before {
+            content:'\00F4'
+        }
+        &.star-rating-item_active {
+            color:$blue;
+
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+        }
+    }
+}
+
+.page-content-header__stats {
+    @extend .cf;
+    overflow: hidden;
+    .news-main__stat {
+        margin-top:0;
+        font-size: 15px;
+        a {
+            font-size: 15px;
+
+            .special & {
+                font-size: 2.2rem;
+                line-height: normal;
+            }
+        }
+    }
+    .doc-links {
+         float:right;
+         margin-top:-3px;
+
+        .special & {
+            text-align: right;
+            max-width: 368px;
+            margin: 0 0 10px;
+        }
+        .fontsize2 & {
+            max-width: 316px;
+        }
+        .fontsize3 & {
+            max-width: 264px;
+        }
+    }
+}
+
+.publication-dates, .content p.publication-dates {
+    font-size: 15px;
+    margin:40px 0 30px;
+
+    .special & {
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+}
+
+.star-rating__list_disabled a {
+    cursor:default;
+}

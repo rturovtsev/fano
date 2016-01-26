@@ -1,0 +1,15 @@
+include ../header-logo/header-logo
+include ../header-search/header-search
+include ../header-social-menu/header-social-menu
+
+
+mixin header(data)
+	div.header.row
+		div.columns.large-9.small-9
+			if data
+				+header-logo(header_logo.default)
+			else
+				+header-logo(header_logo.nolink)
+		div.columns.large-3.small-3
+			+header-social-menu()
+			+header-search()

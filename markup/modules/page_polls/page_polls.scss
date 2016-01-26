@@ -1,0 +1,231 @@
+.polls-list {
+    @include nl;
+}
+.polls-list_one {
+    margin-bottom:25px;
+    padding-bottom:25px;
+    border-bottom:2px solid $darkgray;
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1
+    }
+
+    time {
+        color:$seablue;
+        font-size: 15px;
+
+        .special & {
+            font-size: 2.2rem;
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1
+        }
+    }
+    h2 {
+        @extend .content-h2;
+        margin:10px 0 7px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &:last-child {
+        border-bottom:0;
+    }
+}
+.poll-note {
+    font-size: 15px;
+    line-height: 1.5em;
+
+    .special & {
+        font-size: 2rem;
+    }
+
+    b {
+        font-weight: normal;
+        color:$seablue;
+
+        .special & {
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1
+        }
+    }
+    .anons__content & {
+        margin-top:10px;
+    }
+}
+
+.poll-form {
+
+}
+.poll-question {
+    margin-bottom:20px;
+    h2 {
+        color:$blue;
+        margin:20px 0 15px;
+        padding-bottom:5px;
+        font-size: 18px;
+        .special & {
+            font-size: 2.4rem;
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1
+        }
+
+        + .poll-note {
+            margin:-10px 0 20px;
+        }
+    }
+    .form-line {
+        margin:12px 120px 12px 20px;
+
+        .special & {
+            font-size: 2rem;
+        }
+    }
+    + .poll-question h2 {
+        margin-top:0;
+    }
+    .form-radio-label {
+        display:block;
+    }
+
+}
+
+section.poll-question  {
+    .poll-question__rating {
+        margin-top:6px;
+    }
+}
+
+.poll-question__rating {
+    float:right;
+    margin:30px 0 0 30px;
+}
+
+.poll-form-footer {
+    // border-top:1px solid $darkgray;
+    // padding-top:15px;
+    .poll-note {
+        margin-bottom:20px;
+    }
+    + .poll-form {
+        margin-top:20px;
+    }
+}
+
+.poll-result {
+    .poll-question {
+        + .poll-question {
+            margin-top:40px;
+        }
+
+        h2 {
+            margin-bottom:15px;
+        }
+        .form-radio-label {
+            padding-top:3px;
+        }
+    }
+    + .poll-form-footer .poll-note {
+        margin-bottom:0;
+    }
+}
+
+.poll-result-line {
+    font-size: 15px;
+    display:table-row;
+
+    .special & {
+        font-size: 2rem;
+    }
+}
+.poll-result_label {
+    padding:10px 0 10px;
+    display:table-cell;
+    vertical-align: middle;
+    width:460px;
+    padding-right:60px;
+    height:57px;
+    border-bottom:1px solid $darkgray;
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1
+    }
+}
+.poll-result_value {
+    padding:10px 0 10px;
+    display:table-cell;
+    vertical-align: middle;
+    width:260px;
+    border-bottom:1px solid $darkgray;
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1
+    }
+
+    b {
+        font-size: 15px;
+        font-weight: normal;
+        color:$seablue;
+
+        .special & {
+            font-size: 2rem;
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1
+        }
+    }
+}
+
+.poll-result_graph {
+    height:3px;
+    margin-top:3px;
+    background: $blue;
+
+    .special & {
+        background-color: $black;
+    }
+    .special.color2 & {
+        background-color: $white;
+    }
+    .special.color3 & {
+        background-color: $specblue1
+    }
+}
+section.poll-question .page-content-rating {
+    margin-top:-10px;
+}

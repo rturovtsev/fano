@@ -1,0 +1,96 @@
+include ../paginator/paginator
+include ../filter/filter
+mixin page_mediagallery(data)
+	section.page-content
+		header.page-content-header
+			h1 Медиаматериалы
+
+		+filter('media')
+
+		.row.row-9
+			ul.news-main-list
+				li.news-main-item.column.large-3.small-3
+					a(href="/mediagallery_one.html").news-main__imagebox.news-main__imagebox_image
+						img.news-main__image(src="%=staticPrefix=%img/content/news2.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") События
+						a.news-main__title(href="/mediagallery_one.html")
+							span Владимир Путин осмотрел Приморский океанариум
+				li.news-main-item.column.large-3.small-3
+					a(href="/mediagallery_video.html").news-main__imagebox.news-main__imagebox_video
+						img.news-main__image(src="%=staticPrefix=%img/content/news3.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") Интервью
+						a.news-main__title
+							span Интервью Михаила Котюкова телеканалу РБК
+
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_image
+						img.news-main__image(src="%=staticPrefix=%img/content/news4.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") Новости науки
+						a.news-main__title
+							span В Крыму создадут 7 федеральных государственных научных учреждений ФАНО 
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_image
+						img.news-main__image(src="%=staticPrefix=%img/content/news2.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") События
+						a.news-main__title
+							span Владимир Путин осмотрел Приморский океанариум
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_video
+						img.news-main__image(src="%=staticPrefix=%img/content/news3.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") Интервью
+						a.news-main__title
+							span Интервью Михаила Котюкова телеканалу РБК
+
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_image
+						img.news-main__image(src="%=staticPrefix=%img/content/news4.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") Новости науки
+						a.news-main__title
+							span В Крыму создадут 7 федеральных государственных научных учреждений ФАНО 
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_image
+						img.news-main__image(src="%=staticPrefix=%img/content/news2.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") События
+						a.news-main__title
+							span Владимир Путин осмотрел Приморский океанариум
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_video
+						img.news-main__image(src="%=staticPrefix=%img/content/news3.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") Интервью
+						a.news-main__title
+							span Интервью Михаила Котюкова телеканалу РБК
+
+				li.news-main-item.column.large-3.small-3
+					a(href="#").news-main__imagebox.news-main__imagebox_image
+						img.news-main__image(src="%=staticPrefix=%img/content/news4.jpg")
+					div.news-main__text
+						p.news-main__stat
+							time 21.09.2015
+							a(href="#") Новости науки
+						a.news-main__title
+							span В Крыму создадут 7 федеральных государственных научных учреждений ФАНО 
+		+paginator(true)

@@ -1,0 +1,1174 @@
+// Common styles of the project
+html {
+    overflow-y:scroll;
+    font-size: 10px;
+
+    &.fontsize2 {
+        font-size: 12.5px;
+    }
+    &.fontsize3 {
+        font-size: 15px;
+    }
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #E4EAED;
+}
+
+body.special {
+    padding-top: 46px;
+    font-family: $Arial;
+    color: $black;
+    background: transparent;
+
+    .page__body img {
+        display: none;
+    }
+    .form-captcha-block img {
+        display: inline-block;
+    }
+
+    &.color2 {
+        background-color: $black;
+        border-color: $white;
+        color: $white;
+    }
+    &.color3 {
+        background-color: $specblue2;
+        border-color: $specblue1;
+        color: $specblue1;
+    }
+    &.font2 {
+        font-family: $Times;
+    }
+    &.spacing2 {
+        letter-spacing: 2px;
+    }
+    &.spacing3 {
+        letter-spacing: 5px;
+    }
+}
+
+
+
+.page {
+
+}
+.page__inside {
+    width:1060px;
+    padding:0 30px;
+    margin:auto;
+}
+
+@media screen and (max-width: 1060px) {
+    .page__inside {
+        width:1000px;
+        padding:0;
+    }
+}
+
+.page__wrapper {
+    //background: #eee;
+    min-height: 100%;
+    margin-bottom: -285px;
+    background: url(%=staticPrefixForCss=%general/bg.png) 50% 0 repeat-y;
+
+    .special & {
+        background: none;
+    }
+
+    .page__inside {
+        background: #fff;
+
+        .special & {
+            background-color: transparent;
+        }
+    }
+}
+
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    height: 285px;
+}
+
+.page__body {
+	padding-top:30px;
+}
+
+.page-content {
+    padding-bottom:50px;
+}
+.page-content_one h1.doc-title {
+    font-size:20px;
+    line-height:26px;
+}
+
+.page-content_list {
+    padding-bottom:50px;
+}
+
+.page-content-header {
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin:0 0 40px;
+
+        .special & {
+            font-size: $h1-font-size_special;
+        }
+    }
+    + .tabs {
+        margin-top:-28px;
+    }
+}
+
+.column-clear {
+    clear:both;
+}
+
+.publication-dates {
+    clear:both;
+}
+.content, .news-list__content {
+    word-break: break-word;
+}
+.page-content .anons__content_nopadding,
+.tab-contents-item_nopadding {
+    padding-top:0;
+}
+.page-content_rating .page-content-header {
+    margin-bottom:0;
+}
+
+.page__left .row-9.row {
+    clear:both;
+}
+.page-content .anons__content_nopadding, .tab-contents-item_nopadding {
+    padding-top:0 !important;
+}
+
+/* Breadcrumbs */
+.page__breadcrumbs {
+    min-height:18px;
+    font-family: $body-font-family;
+    letter-spacing: normal;
+}
+.breadcrumbs {
+    font-size:14px;
+    @include nl;
+    margin:0 0 0 15px;
+    padding-top:10px;
+    li {
+        display: inline;
+        &:after {
+            content: "/";
+            margin: 0 2px 0 4px;
+        }
+        &:last-child:after {
+            display: none;
+        }
+        a {
+            color:$seablue;
+
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+        }
+    }
+}
+
+.content-h2 {
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
+
+    .special & {
+        font-size: $h2-font-size_special;
+        line-height: normal;
+    }
+}
+.content-h3 {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: normal;
+
+    .special & {
+        font-size: 2.2rem;
+        line-height: normal;
+    }
+}
+
+.content {
+    text-align: justify;
+    .special & {
+        font-size: $base-font-size_special;
+        line-height: normal;
+    }
+
+    > h2:first-child, > h3:first-child, > h4:first-child, > h5:first-child  {
+        margin-top:0;
+    }
+    h2 {
+        @extend .content-h2;
+        margin: 40px 0 10px;
+    }
+    h3 {
+        @extend .content-h3;
+        margin: 30px 0 10px;
+    }
+    h3, h2 {
+        + h4 {
+            margin-top:20px;
+        }
+        + ul, + ul.links-list, + ul.list  {
+            margin-top:20px;
+        }
+    }
+    h4 {
+        @extend .content-h3;
+        margin: 30px 0 10px;
+        + ul {
+            margin-top:-10px;
+        }
+    }
+
+    h5 {
+        font-size: 17px;
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 30px 0 10px;
+        @include link;
+
+        .special & {
+            font-size: 2rem;
+            line-height: normal;
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+    }
+    p {
+        font-size: 16px;
+        line-height: 21px;
+        margin:3px 0 17px;
+
+        .special & {
+            font-size: $base-font-size_special;
+            line-height: normal;
+        }
+    }
+
+    ol {
+        padding-left:20px;
+        li {
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom:10px;
+
+            .special & {
+                font-size: $base-font-size_special;
+                line-height: normal;
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+        }
+    }
+
+    ul.list, ul {
+        @include nl;
+        margin:3px 0 17px;
+        li {
+            position: relative;
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom:10px;
+            padding-left:17px;
+
+            .special & {
+                font-size: $base-font-size_special;
+                line-height: normal;
+                padding-left: 1.9rem;
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+
+            &:before {
+                content:'—';
+                margin-right: 5px;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    ul.links-list {
+        @include nl;
+        margin:3px 0 17px;
+        li {
+            margin-bottom:10px;
+            padding-left:0;
+            a {
+                text-decoration: none;
+                @include black-link-decorated;
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .before-list ~ ul.list {
+        margin-top:-5px;
+    }
+    table {
+        @extend .basic-table2;
+        text-align: left;
+        &.lines-table {
+            @extend .lines-table;
+            border:0;
+            th, td.th {
+                background: #fff;
+            }
+            th, td {
+                border-right:0;
+            }
+            tr:hover th, tr:hover td.th {
+                background: $fanoBlue1;
+            }
+            td:first-child {
+                white-space:nowrap;
+            }
+        }
+    }
+}
+.text.content {
+    text-align: left;
+}
+
+.ajax-loading {
+    position: relative;
+    &:after {
+        content:'';
+        position: absolute;
+        z-index:5;
+        top:50%;
+        left:50%;
+        margin:-5px 0 0 -40px;
+        background: url(%=staticPrefixForCss=%general/ajax-loading.gif) 0 0 no-repeat;
+        width:80px;
+        height:10px;
+    }
+     &.tab-contents-item:after {
+        margin:0;
+        top:20px;
+        left:0;
+    }
+}
+
+.nowrap {
+    white-space:nowrap;
+}
+.views {
+    white-space:nowrap;
+    color:$seablue;
+    &:before {
+        content:'';
+        @extend .ib-m;
+        @include bg-svg($look);
+        margin-right: 7px;
+        margin-top: -2px;
+    }
+}
+
+.lines-table {
+    width:100%;
+    border-top:2px solid $darkgray;
+    th, td {
+        border-bottom:1px solid $darkgray;
+        font-size: 13px;
+        padding:12px 15px;
+    }
+    th, td.th {
+        color:$seablue;
+        text-align: left;
+        font-weight: normal;
+        padding-left:0;
+    }
+    tr:hover {
+        background: $fanoBlue1;
+    }
+}
+
+.number {
+    font-size: 20px;
+    font-weight:100;
+}
+
+
+// FORM
+.form {
+    h2 {
+        @extend .content-h2;
+        margin:0 0 15px;
+    }
+}
+
+
+
+.form-fieldset {
+    + .form-fieldset {
+        margin-top:30px;
+    }
+}
+
+.form-line {
+    font-size: 15px;
+}
+
+.form-row {
+    + .form-row {
+        margin-top:10px;
+    }
+    .form_wide & + .form-row {
+        margin-top:20px;
+    }
+}
+
+span.required {
+    color:$red;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+.form-label {
+    font-size: 15px;
+    display: block;
+    margin-bottom:5px;
+
+    .special & {
+        letter-spacing: normal;
+        font-family: $body-font-family;
+        font-size: 18px;
+    }
+
+
+    &.required:after {
+        content:'*';
+        color:$red;
+
+        .special & {
+            color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+        }
+    }
+}
+
+.form-wrap {
+    label {
+        @extend .form-label;
+    }
+
+    .ui-selectmenu-button .ui-icon.ui-icon-triangle-1-s {
+        width:28px;
+        height:28px;
+        border-left:0;
+        &:after {
+            left: 6px;
+            top: 11px;
+        }
+    }
+    .ui-selectmenu-button span.ui-selectmenu-text {
+        padding:7px 10px 4px;
+        font-size: 15px;
+    }
+
+}
+
+.form-text {
+    width:100%;
+    border:1px solid $fanoGray2;
+    padding:4px 10px;
+
+    .special & {
+        border-color: $black;
+        background-color: $white;
+    }
+    .special.color2 & {
+        border-color: $white;
+        background-color: $black;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+        background-color: $specblue2;
+    }
+}
+
+.form-textarea {
+    @extend .form-text;
+    height:100px;
+}
+textarea {
+    display: block;
+}
+
+
+.form-radio {
+    visibility:hidden;
+    width:0;
+    position:absolute;
+}
+.form-radio-label {
+    position: relative;
+    padding:1px 0 0 27px;
+    &:before {
+        content:'';
+        position: absolute;
+        left:0;
+        top:2px;
+        display: block;
+        width:16px;
+        height:16px;
+        border-radius:50%;
+        border:1px solid $darkgray;
+        box-shadow:0 0 1px 0 $darkgray;
+
+        .special & {
+            border-color: $black;
+            top: 4px;
+            box-shadow: none;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1
+        }
+
+        .fontsize2 & {
+            top: 6px;
+        }
+        .fontsize3 & {
+            top: 9px;
+        }
+
+        .special .spec_nonsizing & {
+            top: 4px;
+        }
+    }
+}
+.form-radio:checked ~ .form-radio-label {
+    &:before {
+        border-color:$blue;
+
+        .special & {
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1
+        }
+    }
+    &:after {
+        content:'';
+        position: absolute;
+        left:4px;
+        top:6px;
+        display: block;
+        width:8px;
+        height:8px;
+        border-radius:50%;
+        background: $blue;
+
+        .special & {
+            top: 8px;
+            background: $black;
+        }
+        .special.color2 & {
+            background: $white;
+        }
+        .special.color3 & {
+            background: $specblue1
+        }
+        .fontsize2 & {
+            top: 10px;
+        }
+        .fontsize3 & {
+            top: 13px;
+        }
+
+        .special .spec_nonsizing & {
+            top: 8px;
+        }
+    }
+}
+
+.form-checkbox {
+    visibility:hidden;
+    width:0;
+    position:absolute;
+}
+.form-checkbox-label {
+    position: relative;
+    padding:1px 0 0 27px;
+    &:before {
+        content:'';
+        position: absolute;
+        left:0;
+        top:2px;
+        display: block;
+        width:16px;
+        height:16px;
+        border:1px solid rgba($fanoGray2, 0.5);
+        box-shadow:0 0 0 1px rgba($fanoGray2, 0.5);
+
+        .special & {
+            top: 4px;
+            border-color: $black;
+            background-color: $white;
+            box-shadow: none;
+        }
+        .special.color2 & {
+            border-color: $white;
+            background-color: $black;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+            background-color: $specblue2;
+        }
+    }
+}
+.form-checkbox:checked ~ .form-checkbox-label {
+    &:before {
+        border-color:$blue;
+
+        .special & {
+            border-color: $black;
+            background-color: $white;
+        }
+        .special.color2 & {
+            border-color: $white;
+            background-color: $black;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+            background-color: $specblue2;
+        }
+    }
+    &:after {
+        content:'\00F5';
+        font-family:"WebSymbolsLigaRegular";
+        position: absolute;
+        top:0;
+        left:0;
+        display: block;
+        width:16px;
+        height:16px;
+        background: $blue;
+        color:#fff;
+        text-align: center;
+        line-height: 13px;
+        font-size: 15px;
+
+        .special & {
+            top: 4px;
+            background: $white;
+            color: $black;
+            border: 1px solid $black;
+        }
+        .special.color2 & {
+            background: $black;
+            color: $white;
+            border: 1px solid $white;
+        }
+        .special.color3 & {
+            background: $specblue2;
+            color: $specblue1;
+            border: 1px solid $specblue1;
+        }
+    }
+}
+
+.form-wrap label.form-radio-label, .form-wrap label.form-checkbox-label {
+    margin-bottom:0;
+}
+
+.form-note {
+    font-size: 15px;
+    margin:5px 0 10px;
+
+    .special & {
+        font-size: 18px;
+    }
+}
+
+.form-captcha-block {
+    background: #F4F4F4;
+    margin-top:30px;
+    margin-bottom:10px;
+    padding:10px;
+
+    .special & {
+        background-color: transparent;
+        border: 1px solid $black;
+    }
+    .special.color2 & {
+        border: 1px solid $white;
+    }
+    .special.color3 & {
+        border: 1px solid $specblue1;
+    }
+
+    .form-label {
+        margin-bottom:15px;
+    }
+}
+
+.form-captcha-line {
+   font-size: 0;
+}
+
+.form-text__captcha,
+.form-captcha {
+    @extend .ib-m;
+}
+.form-text__captcha {
+    width:115px;
+    font-size: 16px;
+}
+.form-captcha {
+    width:94px;
+    margin-left:10px;
+
+}
+
+.form-footer {
+    margin-top:30px;
+    .form-button {
+        margin-right:20px;
+    }
+}
+
+.form-button {
+    background: $fanoBlue6;
+    color:#fff;
+    border:0;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    height:40px;
+    line-height: 40px;
+    min-width:222px;
+
+    .special & {
+        font-size: 18px !important;
+        line-height: normal !important;
+        background-color: $white;
+        color: $black;
+        border: 1px solid $black;
+    }
+    .special.color2 & {
+        background-color: $black;
+        color: $white;
+        border: 1px solid $white;
+    }
+    .special.color3 & {
+        background-color: $specblue2;
+        color: $specblue1;
+        border: 1px solid $specblue1;
+    }
+
+    &:hover {
+        background: $fanoBlue5;
+
+        .special & {
+            background-color: $black;
+            color: $white;
+        }
+        .special.color2 & {
+            background-color: $white;
+            color: $black;
+        }
+        .special.color3 & {
+            background-color: $specblue1;
+            color: $specblue2;
+            border: 1px solid $specblue1;
+        }
+    }
+    &:disabled, &.disabled {
+        background: $fanoGray1;
+        color: $fanoGray2;
+
+        .special & {
+            border: 1px solid $black;
+            background: $fanoGray1;
+            color: lighten( $black, 20%);
+        }
+        .special.color2 & {
+            border: 1px solid $white;
+            background-color: lighten( $black, 20% );
+            color: darken( $white, 20% );
+        }
+        .special.color3 & {
+            border: 1px solid $specblue1;
+            background-color: lighten( $specblue2, 10% );
+            color: lighten( $specblue1, 10% );
+        }
+    }
+    &.form-button__small {
+        font-size: 14px;
+        height:29px;
+        line-height: 29px;
+    }
+}
+
+.form-button__gray {
+    background: #E7EBED;
+    color: $fanoGray6;
+     &:hover {
+        background: $fanoGray2;
+    }
+}
+
+.form-row-file {
+    margin-bottom:20px;
+}
+.form-note_file {
+    margin:10px 0 5px;
+}
+.form-note-file {
+    margin:0;
+}
+
+
+.form-row.row-9 [class*="column"]+[class*="column"]:last-child {
+    float:left;
+}
+
+.form-note_description {
+    margin-bottom:20px;
+}
+.form-row_captcha .column {
+    width:42%;
+}
+.form-row_captcha .column img {
+    width:auto;
+}
+.form-row-group + .form-row-group,
+.form-row + .form-row-group {
+    margin-top:30px;
+}
+
+.form-row-group+.form-row {
+    margin-top:10px;
+}
+.form-row + .form-row-group {
+    margin-top:10px;
+}
+
+.form-row-group .form-label {
+    margin-bottom:10px;
+}
+
+.form-row-group+.form-row-group,  {
+    margin-top:20px;
+}
+
+.form_question > .form-row + .form-row,
+.form_question > .form-row-group + .form-row,
+.form_question > .form-row-group + .form-row-group,
+.form_question > .form-row + .form-row-group {
+     margin-top:20px;
+}
+
+.form-fieldset > .form-row + .form-row,
+.form-fieldset > .form-row-group + .form-row,
+.form-fieldset > .form-row-group + .form-row-group,
+.form-fieldset > .form-row + .form-row-group {
+     margin-top:20px;
+}
+
+
+.errors_message {
+    color: #ff6445;
+    font-size:13px;
+}
+.form-captcha-line {
+    position: relative;
+}
+.form-captcha-line label.error {
+    font-size: 12px;
+    position: absolute;
+    width: 197px;
+    bottom: -28px;
+    left: 0;
+}
+.form-wrap_checksub label.error {
+        position: absolute;
+        top: -22px;
+        left: 141px;
+}
+
+.form-row_onegroup + .form-row_onegroup {
+    margin-top:-10px;
+}
+
+
+.form-wrap .ui-selectmenu-button {
+    width:100%;
+    display: block;
+}
+
+.form-wrap_select_error {
+    .ui-selectmenu-button {
+        border-color:#ff6445;
+    }
+    label.error {
+        margin-top:-2px;
+    }
+}
+
+.ui-menu .ui-menu-item {
+    font-size: 15px;
+}
+
+/* Validation */
+.form {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        &.error {
+            border-color:$red;
+            &:focus {
+                outline-color:$red;
+            }
+        }
+    }
+    label.error {
+        margin-top:3px;
+        color:$red;
+    }
+    textarea + label.error {
+        margin-top:0;
+    }
+}
+
+
+/* Tables */
+.basic-table {
+    width:100%;
+    border:1px solid $seablue;
+
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1
+    }
+
+    th,td {
+        padding:10px 15px;
+
+    }
+    th, td.th {
+        text-align: left;
+        border-bottom:2px solid $seablue;
+        font-size: 15px;
+        font-weight: bold;
+
+        .special & {
+            font-size: $base-font-size_special;
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1
+        }
+    }
+    td {
+        border-bottom:1px solid $seablue;
+        font-size: 13px;
+
+        .special & {
+            font-size: $base-font-size_special;
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1
+        }
+    }
+}
+.basic-table2 {
+    @extend .basic-table;
+    th, td.th {
+        background: #eceff1;
+        color:$seablue;
+        font-size: 13px;
+        font-weight: normal;
+        vertical-align: middle;
+        height:46px;
+        border-right:1px solid $seablue;
+
+        .special & {
+            background-color: transparent;
+            font-size: $base-font-size_special;
+            line-height: normal;
+            border-color: $black;
+        }
+        .special.color2 & {
+            border-color: $white;
+        }
+        .special.color3 & {
+            border-color: $specblue1;
+        }
+
+    }
+    td {
+        border-right:1px solid $seablue;
+    }
+    th:last-child,
+    td:last-child {
+        border-right:0;
+    }
+}
+
+
+.sitemap-menu {
+    @include nl;
+    ul {
+        @include nl;
+        margin:5px 0 0 20px;
+        li {
+            padding: 5px 15px;
+        }
+        a {
+
+            @include black-link;
+
+            .special & {
+                font-size: $base-font-size_special;
+            }
+        }
+    }
+    > li {
+        margin-bottom:20px;
+        > ul {
+            margin-left:0;
+            li {
+                padding-left:0;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.sitemap-item {
+
+    h2 {
+        color: $blue;
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: normal;
+        margin: 0 0 10px;
+        padding-bottom:2px;
+        border-bottom: 2px solid $fanoGray2;
+
+        .special & {
+            font-size: 2.2rem;
+            line-height: normal;
+            color: $black;
+            border-color: $black;
+        }
+        .special.color2 & {
+            color: $white;
+            border-color: $white;
+        }
+        .special.color3 & {
+            color: $specblue1;
+            border-color: $specblue1;
+        }
+
+        a {
+            color: $blue;
+
+            .special & {
+                color: $black;
+            }
+            .special.color2 & {
+                color: $white;
+            }
+            .special.color3 & {
+                color: $specblue1;
+            }
+
+        }
+    }
+}
+
+
+.show_in_special {
+    display: none;
+
+    .special & {
+        display: block;
+    }
+}
+.special {
+    .spec_mb30 {
+        margin-bottom: 30px;
+    }
+}
+
+.logos-list {
+    margin-top:-10px;
+}
+.logos-list img {
+    max-height:150px;
+}

@@ -1,0 +1,246 @@
+// GUI stylies of the project
+// For example, styles of the links, buttons and so on.
+
+
+
+@mixin link() {
+	color:$blue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+
+@mixin link-gray() {
+	color:$seablue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+
+@mixin ld() {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@mixin nd() {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@mixin normal-link() {
+	@include link;
+	@include nd;
+}
+
+@mixin black-link() {
+	color:$baseFontColor;
+	@include nd;
+	@include smart-underline-not(#fff, $baseFontColor,  blue, 86%);
+
+    .special & {
+        color: $black;
+        background: none;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+
+@mixin gray-link() {
+	@include link-gray;
+	@include smart-underline-not(#fff, $seablue,  blue, 86%);
+}
+
+@mixin normal-link-decorated() {
+	color:$blue;
+	@include smart-underline(#fff, $blue,  blue, 86%);
+}
+
+@mixin black-link-decorated() {
+	color:$baseFontColor;
+	@include smart-underline(#fff, $baseFontColor,  blue, 86%);
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+
+@mixin gray-link-decorated() {
+	@include link-gray;
+	@include smart-underline(#fff, $seablue,  blue, 86%);
+}
+
+
+
+a {
+	color:$baseFontColor;
+	&:hover {
+		text-decoration: none;
+	}
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+	.no-decoration {
+
+	}
+}
+
+.blue {
+	@include link;
+}
+.seablue {
+	color:$seablue;
+	&.no-decoration {
+		@include gray-link();
+	}
+}
+
+
+.icon-link {
+	@extend .ib-m;
+}
+
+p {
+	margin:0;
+}
+
+.js-hidden {
+	display: none;
+}
+
+.clear {
+    clear:both;
+}
+
+.btn_special {
+    display: inline-block;
+    text-decoration: none;
+    color: $white;
+    background: $black;
+    padding: 6px 30px;
+    border: 1px solid;
+    .special & {
+        line-height: normal !important;
+        background-color: $white;
+        color: $black;
+        border: 1px solid $black;
+    }
+    .special.color2 & {
+        background-color: $black;
+        color: $white;
+        border: 1px solid $white;
+    }
+    .special.color3 & {
+        background-color: $specblue2;
+        color: $specblue1;
+        border: 1px solid $specblue1;
+    }
+
+    .special &:hover {
+        background-color: $black;
+        color: $white;
+    }
+    .special.color2 &:hover {
+        background-color: $white;
+        color: $black;
+    }
+    .special.color3 &:hover {
+        background-color: $specblue1;
+        color: $specblue2;
+        border: 1px solid $specblue1;
+    }
+}
+
+
+::-webkit-input-placeholder {
+    color:$seablue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}
+
+::-moz-placeholder          {
+    color:$seablue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}/* Firefox 19+ */
+
+:-moz-placeholder           {
+    color:$seablue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}/* Firefox 18- */
+
+:-ms-input-placeholder      {
+    color:$seablue;
+
+    .special & {
+        color: $black;
+    }
+    .special.color2 & {
+        color: $white;
+    }
+    .special.color3 & {
+        color: $specblue1;
+    }
+}

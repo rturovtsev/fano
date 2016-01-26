@@ -1,0 +1,15 @@
+mixin page_activity(data)
+    section.page-content
+        header.page-content-header
+            h1 Деятельность
+        ul.block-list.block-list_2cols
+            each val in data.list
+                li.block-list-item
+                    a(href=val.url)
+                        span.block-list-item__title
+                            span #{val.title}
+                        span.block-list-item__description
+                            | Образован в целях координации взаимодействия Агентства и подведомственных ему научных организаций с Российской академией наук.
+
+            
+       

@@ -1,0 +1,55 @@
+.header-search {
+	border:1px solid #b0bec5;
+    height:28px;
+    .special & {
+        border-color: $black;
+    }
+    .special.color2 & {
+        border-color: $white;
+    }
+    .special.color3 & {
+        border-color: $specblue1;
+    }
+}
+	.header-search__text {
+		border:0;
+		width:83%;
+		padding: 4px 3%;
+    	font-size: 13px;
+    	line-height: 19px;
+        height: 18px;
+        background:transparent;
+
+        .special.color2 & {
+            background-color: $black;
+            color: $white;
+        }
+        .special.color3 & {
+            background-color: $specblue2;
+            color: $specblue1;
+        }
+	}
+	.header-search__btn {
+		position: relative;
+		top:4px;
+		border:0;
+		background-color: #fff;
+		text-indent: -9999px;
+		overflow: hidden;
+		@include bg-svg($search);
+        width:14px;
+        padding:0;
+        margin:0;
+        background: url(%=staticPrefixForCss=%minified-svg/search.svg) 0 0 no-repeat;
+        .special & {
+            @include bg-svg($b_search);
+        }
+        .special.color2 & {
+            background-color: $black;
+            @include bg-svg($w_search);
+        }
+        .special.color3 & {
+            background-color: $specblue2;
+            @include bg-svg($blue_search);
+        }
+	}
